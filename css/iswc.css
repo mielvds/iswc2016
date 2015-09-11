@@ -23,11 +23,10 @@ body > div.iswc-wrap{
 	text-align: left;
 	/*border:1px solid #999;*/
 	box-shadow: 0px 0px 5px #888888;
-	padding-top:10px;
 }
 
 body > div.iswc-wrap > div.iswc-body{
-	padding:0px;
+	padding:0 10px;
 	min-height: 500px;
 }
 
