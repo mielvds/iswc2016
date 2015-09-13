@@ -43,6 +43,14 @@ body > div.iswc-wrap > div.iswc-body{
 	padding-right:10px;
 }
 
+.iswc-news{
+	border-bottom:dotted 1px #dedede;
+	padding-bottom:5px;
+}
+
+.iswc-news > .iswc-news-date{
+	text-align:right;
+}
 
 /* slide */
 div.slide{

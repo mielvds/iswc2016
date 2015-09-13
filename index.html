@@ -6,20 +6,18 @@ layout: default
 </div>
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <hr/>
+  <h1 class="page-heading">News</h1>
 
-  <ul class="post-list">
+  <div class="container-fluid">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		<div class="iswc-news row">
+			<div class="iswc-news-label col-md-8"><strong><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></strong></div>
+			<div class="iswc-news-date col-md-4"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></div>
+		</div>
+	{% endfor %}
+  </div>
+  
+  <!-- <p style="padding-top:20px" class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>
