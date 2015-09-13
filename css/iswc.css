@@ -1,0 +1,62 @@
+body{
+	background-color: #ddd;
+	padding:30px;
+}
+.allign-center{
+	text-align:center;
+}
+.allign-left{
+	text-align:left;
+}
+.grad {
+  background: -webkit-linear-gradient(#ccc,#fff,#fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ccc,#fff,#fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ccc,#fff,#fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ccc,#fff,#fff); /* Standard syntax */
+}
+body > div.iswc-wrap{
+	margin:auto;
+	display:block;
+	background-color: #fff;
+	max-width:1000px;
+	text-align: left;
+	/*border:1px solid #999;*/
+	box-shadow: 0px 0px 5px #888888;
+}
+
+body > div.iswc-wrap > div.iswc-body{
+	padding:0 10px;
+}
+
+.iswc-wrapper-left{
+	border-right:1px solid #ddd;
+	padding-right:10px;
+	min-height: 500px;
+}
+
+.iswc-wrapper-right{
+	padding-right:20px;
+}
+
+.wrapper {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+/* slide */
+div.slide{
+	/*margin: -10px -25px 20px -20px;*/
+}
+
+
+/* bootstrap */
+.navbar{
+	border-radius:0px;
+	/*min-height: auto;
+	margin-bottom: 10px;*/
+}
+.navbar-nav > li > a{
+	/*padding-top:5px;
+	padding-bottom:5px;*/
+}
