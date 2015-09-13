@@ -1,13 +1,25 @@
 <header>
 <img src="{{ site.baseurl }}/images/iswc-header.png" width="100%"/>
 
+<!-- <div style="height:145px;background-image: url({{ site.baseurl }}/images/iswc-header.png); background-repeat: no-repeat;background-size: auto 145px;"></div> -->
+
 <nav class="navbar navbar-inverse">
+
+<div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{ site.baseurl }}/index.html" class="navbar-brand">ISWC2016</a>
+    </div>
+	
    <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Call <span class="caret"></span></a>
+          <a href="{{ site.baseurl }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Call <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Call for Paper</a></li>
             <li><a href="#">Call for Poster</a></li>
@@ -16,7 +28,7 @@
             <li><a href="#">Call for Workshop</a></li>
           </ul>
         </li>
-        <li><a href="#">Venue</a></li>
+        <li><a href="{{ site.baseurl }}/pages/venue.html">Venue</a></li>
       </ul>
     </div>
    </div>
