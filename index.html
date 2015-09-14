@@ -7,17 +7,12 @@ layout: default
 <div class="home">
 
   <hr/>
-  <h1 class="page-heading">News</h1>
+  <p>
+    ISWC 2016 is the premier international forum, for the Semantic Web / Linked Data Community. Here, scientists, industry specialists, and practitioners meet to discuss the future of practical, scalable, user-friendly, and game changing solutions.
+  </p>
+  <div class="text-info" style="text-align:center;font-size:18pt;padding-top:5px">Come and join us in Kobe to hear</div>
 
-  <div class="container-fluid">
-    {% for post in site.posts %}
-		<div class="iswc-news row">
-			<div class="iswc-news-label col-md-8"><strong><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></strong></div>
-			<div class="iswc-news-date col-md-4"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></div>
-		</div>
-	{% endfor %}
-  </div>
-  
-  <!-- <p style="padding-top:20px" class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+  <hr/>
+  {% include news.html %}
 
 </div>
