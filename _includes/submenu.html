@@ -1,3 +1,19 @@
+{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", page.group) %}
+{% if subpages.size >0 %}
+	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", page.group) %}
+	{% if mainpages.size >0 %}
+		{% assign page = mainpages[0] %}
+		<h3><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></h3>
+	{% endif %}
+
+	<ul>
+		{% for page in subpages %}
+			<li><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+<!--
 {% if page.group == "calls" %}
    <h3>Calls</h3>
    <ul>
@@ -34,3 +50,4 @@
    </ul>
    <hr/>
 {% endif %}
+-->
