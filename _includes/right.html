@@ -18,8 +18,12 @@
 <hr/>
 
 {% if page.group == "attending" %}
-	<h3>Japanese Yen</h3>
    {% include yen-exchange.html %}
+   <hr/>
+{% endif %}
+
+{% if (page.group == "calls" or page.group == "deadline") %}
+   {% include clocks.html %}
    <hr/>
 {% endif %}
 
