@@ -1,4 +1,4 @@
-{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", page.group) %}
+{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", page.group | where:"status", "published") %}
 {% if subpages.size >0 %}
 	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", page.group) %}
 	{% if mainpages.size >0 %}
