@@ -86,6 +86,10 @@ div.iswc-chairs div.iswc-chair-panel-heading{
 	border-bottom: 1px solid #ccc;
 }
 
+div.iswc-chairs img.img-circle{
+	width: 75px;
+}
+
 
 /* slide */
 div.slide{
