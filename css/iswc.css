@@ -8,6 +8,12 @@ body{
 .allign-left{
 	text-align:left;
 }
+.allign-right{
+	text-align:right;
+}
+.allign-justify{
+	text-align:justify;
+}
 .grad {
   background: -webkit-linear-gradient(#ccc,#fff,#fff); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#ccc,#fff,#fff); /* For Opera 11.1 to 12.0 */
