@@ -1,10 +1,7 @@
 # Site settings
 title: ISWC2016
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: ISWC 2016 is the premier international forum, for the Semantic Web / Linked Data Community. Here, scientists, industry specialists, and practitioners meet to discuss the future of practical, scalable, user-friendly, and game changing solutions. Come and join us 11-17 October 2016 in Kobe to hear!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://iswc2016.semanticweb.org/" # the base hostname & protocol for your site
 twitter_username: iswc2016
