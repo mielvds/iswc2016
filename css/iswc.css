@@ -70,6 +70,23 @@ ul.iswc-right-emph-date li{
 	
 }
 
+
+div.iswc-chairs div.row:nth-child(n+2){
+	padding-top:10px;
+}
+
+
+div.iswc-chairs h3{
+	margin:0;
+	font-size: 14pt;
+}
+
+div.iswc-chairs div.iswc-chair-panel-heading{
+	padding:10px;
+	border-bottom: 1px solid #ccc;
+}
+
+
 /* slide */
 div.slide{
 	/*margin: -10px -25px 20px -20px;*/
