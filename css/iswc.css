@@ -88,7 +88,10 @@ div.iswc-chairs div.iswc-chair-panel-heading{
 
 div.iswc-chairs img.img-circle{
 	width: 90%;
-	margin-left: 5%
+	max-width: 200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
