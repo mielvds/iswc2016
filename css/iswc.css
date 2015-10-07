@@ -44,22 +44,28 @@ body > div.iswc-wrap{
 }
 
 body > div.iswc-wrap > div.iswc-body{
-	padding:0 10px 20px 10px;
+	padding:0 0 20px 0;
+
 }
 
 .iswc-wrapper-left{
 	border-right:1px solid #ddd;
-	padding-right:10px;
 	min-height: 500px;
 }
 
 .iswc-wrapper-right{
-	padding-right:20px;
+	border-left:1px solid #ddd;
+	margin-left:-1px;
 }
 
 .wrapper {
 	padding-left:10px;
 	padding-right:10px;
+}
+
+.iswc-body-row{
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .iswc-news{
