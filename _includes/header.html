@@ -1,5 +1,16 @@
 <header>
-<img src="{{ site.baseurl }}/images/iswc-header.png" width="100%"/>
+<div class="hidden-xs">
+  <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/iswc-header.png" width="100%"/></a>
+</div>
+
+<div class="visible-xs">
+  {% if page.group == "home" %}
+    <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/iswc-header-m0.png" width="100%"/></a>
+  {% else %}
+    <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/iswc-header-m.png" width="100%"/></a>
+  {% endif %}
+</div>
+
 
 <!-- <div style="height:145px;background-image: url({{ site.baseurl }}/images/iswc-header.png); background-repeat: no-repeat;background-size: auto 145px;"></div> -->
 
@@ -13,7 +24,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="{{ site.baseurl }}/index.html" class="navbar-brand">ISWC2016</a>
+        <!-- <a href="{{ site.baseurl }}/index.html" class="navbar-brand">ISWC2016</a> -->
+        <div class="navbar-brand visible-xs">Menu</div>
       </div>
   	
      <div class="container-fluid">
@@ -29,6 +41,7 @@
               <li><a href="#">Call for Workshop</a></li>
             </ul>
           </li>-->
+      <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
   		<li><a href="{{ site.baseurl }}/pages/calls.html">Calls</a></li>
   		<li><a href="{{ site.baseurl }}/pages/important-dates.html">Important Dates</a></li>
   		<li><a href="{{ site.baseurl }}/pages/program.html">Program</a></li>
@@ -39,6 +52,10 @@
       </div>
      </div>
   </nav>
+</div>
+
+<div class="visible-xs" style="padding:0 20px">
+  {% include submenu.html %}
 </div>
 
 </header>

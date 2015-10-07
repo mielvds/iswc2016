@@ -1,7 +1,19 @@
+/* all */
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body{
+	font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
 	background-color: #ddd;
 	padding:30px 5px;
 }
+
+/* iswc--- */
+
 .allign-center{
 	text-align:center;
 }
@@ -94,6 +106,39 @@ div.iswc-chairs img.img-circle{
     margin-right: auto;
 }
 
+/* submenu */
+
+.iswc-navbar-back{
+	background-color: #000;
+	padding:5px 0;
+	margin-bottom: 20px;
+}
+
+ul.iswc-submenu{
+	margin-left:0;
+	border-radius: 5px;
+	border:1px solid #ddd;
+}
+
+ul.iswc-submenu li a{
+	padding:2px 2px 2px 30px;
+	border-radius: 0;
+	color:#000;
+}
+
+ul.iswc-submenu li.iswc-submenu-header a{
+	padding:2px 2px 2px 20px;
+	border-radius: 0;
+	background-color: #eee;
+}
+
+ul.iswc-submenu li a:hover{
+	background-color: #ccc;
+}
+
+ul.iswc-submenu hr{
+	margin:0;
+}
 
 /* slide */
 div.slide{
@@ -108,11 +153,12 @@ div.slide{
 	margin-bottom: 0;
 }
 
-.navbar-header .navbar-brand,
+.navbar-header,
 .navbar-nav > li > a{
 	padding-top:5px;
 	padding-bottom:5px;
 	height:auto;
+	color:#fff;
 }
 
 nav.iswc-navbar{
@@ -120,11 +166,20 @@ nav.iswc-navbar{
 	border-bottom: 1px solid #fff;
 }
 
-.iswc-navbar-back{
-	background-color: #000;
-	padding:5px 0;
-	margin-bottom: 20px;
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav>li>a{
+	color:white;
 }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{
+	text-shadow:none;
+}
+
+nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+	color:white;
+	background-color: #555;
+}
+
 
 footer{
 	/* background: -webkit-linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* For Safari 5.1 to 6.0 */

@@ -3,15 +3,17 @@
 	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", page.group) %}
 	{% if mainpages.size >0 %}
 		{% assign page = mainpages[0] %}
-		<h3><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></h3>
+		<ul class="iswc-submenu nav nav-pills  nav-stacked">
+			<li class="iswc-submenu-header" role="presentation">
+				<a href="{{ site.baseurl }}/{{ page.path }}"><h4>{{ page.title }}</h4></a>
+			</li>
+			{% for page in subpages %}
+				<hr/>
+				<li  role="presentation"><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></li>
+			{% endfor %}
+		</ul>		
+		<hr/>
 	{% endif %}
-
-	<ul>
-		{% for page in subpages %}
-			<li><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></li>
-		{% endfor %}
-	</ul>
-	<hr/>
 {% endif %}
 
 <!--
