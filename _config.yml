@@ -10,3 +10,6 @@ github_username:  iswc2016
 # Build settings
 markdown: kramdown
 #highlighter: rouge
+
+#Github URL
+github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"

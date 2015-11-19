@@ -2,16 +2,16 @@
 {% if subpages.size >0 %}
 	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", page.group) %}
 	{% if mainpages.size >0 %}
-		{% assign page = mainpages[0] %}
+		{% assign page_item = mainpages[0] %}
 		<div class="panel panel-default">
 			<table class="iswc-submenu table table-hover">
 				<tr>
-					<th onclick="document.location = '{{ site.baseurl }}/{{ page.path }}'" >
-						<h4>{{ page.title }}</h4>
+					<th onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" >
+						<h4>{{ page_item.title }}</h4>
 					</th>
 				</tr>
-				{% for page in subpages %}
-					<tr onclick="document.location = '{{ site.baseurl }}/{{ page.path }}'" ><td><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ page.title }}</td></tr>
+				{% for page_item in subpages %}
+					<tr onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" ><td><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ page_item.title }}</td></tr>
 				{% endfor %}
 			</table>	
 		</div>	
