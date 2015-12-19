@@ -21,6 +21,14 @@ h1{
 	margin-bottom: 30px;
 }
 
+.text-justify{
+	text-align:justify;
+}
+
+ul.text-justify li{
+	text-align:justify;
+}
+
 /* iswc--- */
 
 .allign-center{
@@ -186,6 +194,13 @@ nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
 	background-color: #555;
 }
 
+div.panel h3{
+	margin:0;
+}
+
+div.panel .table tr td:first-child{
+	padding-left:20px;
+}
 
 footer{
 	/* background: -webkit-linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* For Safari 5.1 to 6.0 */
