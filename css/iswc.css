@@ -25,8 +25,22 @@ h1{
 	text-align:justify;
 }
 
-ul.text-justify li{
+ul.text-justify li,
+ol.text-justify li{
 	text-align:justify;
+}
+
+ul li h4{
+	margin-bottom: 0;
+}
+
+ol {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+ol li{
+	padding-top:7px;
 }
 
 /* iswc--- */
