@@ -1,0 +1,17 @@
+---
+title: "Draft"
+updated:   2015-12-18 00:00:00
+layout: default
+status: temporary
+---
+<h1>{{ page.title }}</h1>
+
+  <table class="table table-hover">
+  {% assign iswcpages = (site.pages | where: "status", "draft"  %}
+  {% for page in iswcpages   %}
+    <tr class="iswc-recent iswc-news row {{rclass}}">
+      <td class="iswc-news-label"><strong>{{page.title }}</strong></td>
+      <td class="iswc-news-label"><a target="_blank" href="{{ site.baseurl }}/{{ page.path }}">{{ site.baseurl }}/{{ page.path }}</a></td>
+    </tr>
+  {% endfor %}
+  </table>
