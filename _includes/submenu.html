@@ -1,4 +1,4 @@
-{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", page.group | where:"status", "published") %}
+{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", page.group | where:"status", "published" | sort: "title" | sort: "ordered") %}
 {% if subpages.size >0 %}
 	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", page.group) %}
 	{% if mainpages.size >0 %}
@@ -11,7 +11,10 @@
 					</th>
 				</tr>
 				{% for page_item in subpages %}
-					<tr onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" ><td><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ page_item.title }}</td></tr>
+					<tr onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" >
+						<td><span style="float:left;top:2px" class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+						<div style="padding-left:20px">{{ page_item.title }}</div></td>
+					</tr>
 				{% endfor %}
 			</table>	
 		</div>	
