@@ -14,7 +14,6 @@
 
 
 <!-- <div style="height:145px;background-image: url({{ site.baseurl }}/images/iswc-header.png); background-repeat: no-repeat;background-size: auto 145px;"></div> -->
-
 <div id="iswc-nav" class="iswc-navbar-back">
   <nav class="iswc-navbar navbar navbar-inverse">
 
@@ -54,6 +53,7 @@
      </div>
   </nav>
 </div>
+<div id="iswc-nav-dummy" ></div>
 
 <div class="visible-xs visible-sm" style="padding:0 20px">
   {% include submenu.html %}
@@ -62,11 +62,23 @@
 </header>
 <script>
   $(document).ready(function(){
-     var navTop = $('#iswc-nav').offset().top 
-    $(window).bind('scroll', function() {
+
+    var navTop = $('#iswc-nav').offset().top 
+
+    function moveNavTop() {
       var navHeight = 300; // custom nav height
-      ($(window).scrollTop() > navTop) ? $('#iswc-nav').addClass('iswc-nav-top') : $('#iswc-nav').removeClass('iswc-nav-top');
-    });
+      if($(window).scrollTop() > navTop){ 
+        $('#iswc-nav').addClass('iswc-nav-top');
+        $('#iswc-nav-dummy').addClass("iswc-navbar-back");
+        $('#iswc-nav-dummy').height($('#iswc-nav').height())
+      }else{
+        $('#iswc-nav').removeClass('iswc-nav-top');
+        $('#iswc-nav-dummy').removeClass("iswc-navbar-back");
+        $('#iswc-nav-dummy').height(0);
+      }  
+    }
+    $(window).bind('scroll', moveNavTop);
+    $(window).bind('touchmove', moveNavTop);
   });
 </script>
 
