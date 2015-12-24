@@ -191,6 +191,14 @@ div.slide{
 
 
 /* bootstrap */
+div.iswc-nav-top {
+  position: fixed;
+  width:100%;
+  max-width:1000px;
+  top: 0;
+  z-index: 1;
+}
+
 .navbar{
 	border-radius:0px;
 	min-height: auto;

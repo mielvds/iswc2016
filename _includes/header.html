@@ -4,7 +4,8 @@
 </div>
 
 <div class="visible-xs">
-  {% if page.group == "home" %}
+  <!-- change to "home" if need a big header image on home -->
+  {% if page.group == "home-x" %}
     <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/iswc-header-m0.png" width="100%"/></a>
   {% else %}
     <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/iswc-header-m.png" width="100%"/></a>
@@ -14,7 +15,7 @@
 
 <!-- <div style="height:145px;background-image: url({{ site.baseurl }}/images/iswc-header.png); background-repeat: no-repeat;background-size: auto 145px;"></div> -->
 
-<div class="iswc-navbar-back">
+<div id="iswc-nav" class="iswc-navbar-back">
   <nav class="iswc-navbar navbar navbar-inverse">
 
   <div class="navbar-header">
@@ -59,6 +60,15 @@
 </div>
 
 </header>
+<script>
+  $(document).ready(function(){
+     var navTop = $('#iswc-nav').offset().top 
+    $(window).bind('scroll', function() {
+      var navHeight = 300; // custom nav height
+      ($(window).scrollTop() > navTop) ? $('#iswc-nav').addClass('iswc-nav-top') : $('#iswc-nav').removeClass('iswc-nav-top');
+    });
+  });
+</script>
 
 <!--<header class="site-header">
 
