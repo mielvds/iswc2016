@@ -251,3 +251,13 @@ footer{
 	/* background: linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* Standard syntax */
 	background-color: #fafafa;
 }
+
+/* for small screen */
+@media screen and (max-width: 600px){
+	.iswc-wrapper-left,
+	.iswc-wrapper-right,
+	.wrapper {
+		padding-left:3px;
+		padding-right:3px;
+	}
+}
