@@ -40,15 +40,38 @@ div.panel .table tr td:first-child{
 	padding-left:8px;
 }
 
+.detail{
+	padding-left:20px;
+}
+
 </style>
 
 <script>
 	$(document).ready(function(){
+		$(".detail").hide();
+
 		$("div.iswc-program-controlbar .btn").bind("click", function(){
+			$(".btn-action").removeClass("active");
+
 	    	var tohide = $(this).attr("to-hide");
 	    	var toshow = $(this).attr("to-show");
-	    	$("."+tohide).hide();
-	    	$("."+toshow).show();
+
+	    	if(tohide) $("."+tohide).hide();
+	    	if(toshow) $("."+toshow).show();
+
+	    	var toclick = $(this).attr("to-click");
+	    	if(toclick){
+	    		$(toclick).click();
+	    	}
+
+	    	var toshowdetail = $(this).attr("to-show-detail");
+	    	if(toshowdetail){
+		    	if(toshowdetail=="yes"){
+		    		$(".detail").show();
+		    	}else if(toshowdetail=="no"){
+		    		$(".detail").hide();
+		    	}
+	    	}
 		});
 	});
 </script>
@@ -57,59 +80,59 @@ div.panel .table tr td:first-child{
 <div class="panel panel-default iswc-program-controlbar">
   	<div class="panel-body">
   		<div class="btn-group btn-group-justified" data-toggle="buttons">
-			<label class="btn btn-lg active">
+			<label id="btnAllPrograms" class="btn-action btn btn-lg active" to-click="#btnEveryday, #btnAllSessions, #btnWholeDay">
 		    	<input type="radio" name="options" autocomplete="off" checked> All Program
 		  	</label>
-		  	<label class="btn btn-lg">
+		  	<label id="btnToday" class="btn-action btn btn-lg" to-click="#btnFri21, #btnAllSessions, #btnWholeDay">
 		    	<input type="radio" name="options" autocomplete="off"> Today
 		  	</label>
-		  	<label class="btn btn-lg">
+		  	<label id="btnNow" class="btn-action btn btn-lg" to-click="#btnFri19, #btnAllSessions, #btnAfternoon">
 		    	<input type="radio" name="options" autocomplete="off"> Now
 		  	</label>
 		</div>
 
   		<div class="btn-group btn-group-justified" data-toggle="buttons">
-  			<label class="btn" to-show="pday">
+  			<label id="btnEveryday" class="btn" to-show="pday">
 		    	<input type="radio" name="options" autocomplete="off" > Everyday
 		  	</label>
-			<label class="btn" to-hide="pday" to-show="2016-10-19">
+			<label id="btnWed19" class="btn" to-hide="pday" to-show="2016-10-19">
 		    	<input type="radio" name="options" autocomplete="off" > Wed (19)
 		  	</label>
-			<label class="btn" to-hide="pday" to-show="2016-10-20">
-		    	<input type="radio" name="options" autocomplete="off" > Tue (20)
+			<label id="btnThu20" class="btn" to-hide="pday" to-show="2016-10-20">
+		    	<input type="radio" name="options" autocomplete="off" > The (20)
 		  	</label>
-		  	<label class="btn" to-hide="pday" to-show="2016-10-21">
+		  	<label id="btnFri21" class="btn" to-hide="pday" to-show="2016-10-21">
 		    	<input type="radio" name="options" autocomplete="off"> Fri (21)
 		 	</label>
 		</div>
 
   		<div class="btn-group btn-group-justified" data-toggle="buttons">
-  			<label class="btn" to-show="psession">
+  			<label id="btnAllSessions" class="btn" to-show="psession" to-show-detail="no">
 		    	<input type="radio" name="options" autocomplete="off" > All sessions
 		  	</label>
-			<label class="btn" to-hide="psession" to-show="research">
+			<label id="btnResearch" class="btn" to-hide="psession" to-show="research" to-show-detail="yes">
 		    	<input type="radio" name="options" autocomplete="off" > Research
 		  	</label>
-		  	<label class="btn" to-hide="psession" to-show="resource">
+		  	<label id="btnResource" class="btn" to-hide="psession" to-show="resource" to-show-detail="yes">
 		    	<input type="radio" name="options" autocomplete="off"> Resource
 		 	</label>
-		  	<label class="btn" to-hide="psession" to-show="application">
+		  	<label id="btnApplication" class="btn" to-hide="psession" to-show="application" to-show-detail="yes">
 		    	<input type="radio" name="options" autocomplete="off"> Application
 		  	</label>
 		</div>
 
 
   		<div class="btn-group btn-group-justified" data-toggle="buttons">
-  			<label class="btn"  to-show="ptime">
+  			<label id="btnWholeDay" class="btn"  to-show="ptime">
 		    	<input type="radio" name="options" autocomplete="off" > Whole day
 		  	</label>
-			<label class="btn" to-hide="ptime" to-show="morning">
+			<label id="btnMorning" class="btn" to-hide="ptime" to-show="morning">
 		    	<input type="radio" name="options" autocomplete="off" > Morning
 		  	</label>
-		  	<label class="btn" to-hide="ptime" to-show="afternoon">
+		  	<label id="btnAfternoon" class="btn" to-hide="ptime" to-show="afternoon">
 		    	<input type="radio" name="options" autocomplete="off"> Afternoon
 		 	</label>
-		  	<label class="btn" to-hide="ptime" to-show="evening">
+		  	<label id="btnEvening" class="btn" to-hide="ptime" to-show="evening">
 		    	<input type="radio" name="options" autocomplete="off"> Evening
 		  	</label>
 		</div>
@@ -140,22 +163,22 @@ div.panel .table tr td:first-child{
 				  		<td class="psession research">
 				  			Research I
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession resource">
 				  			Resource I
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession application">
 				  			Application I
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 			  		</tr>
@@ -170,22 +193,22 @@ div.panel .table tr td:first-child{
 				  		<td class="psession research">
 				  			Research II
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession resource">
 				  			Resource II
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession application">
 				  			Application II
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 			  		</tr>
@@ -200,22 +223,248 @@ div.panel .table tr td:first-child{
 				  		<td class="psession research">
 				  			Research III
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession resource">
 				  			Resource III
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 				  		<td class="psession application">
 				  			Application III
 				  			<ul>
-				  				<li>aaaa</li>
-				  				<li>bbbb</li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime evening">
+				  		<td>18:00-21:00</td>
+				  		<td class="text-center" colspan="5">Dinner</td>
+			  		</tr>
+			 	</tbody>
+			</table>
+	</div>
+</section>
+
+<!-- ################################################################################  -->
+<section class="pday 2016-10-20">
+	<div class="panel panel-default">
+	  	<div class="panel-heading">
+			<h3 class="text-center">October 20th (Thu), 2016</h3>
+		</div>
+			<table class="table">
+				<thread>
+					<tr>
+						<th style="width:100px">Time</th>
+						<th class="text-center" colspan="5">Program</th>
+					</tr>
+			  	</thread>
+			  	<tbody>	
+			  		<tr class="ptime morning keynote">
+				  		<td>10:00-11:00</td>
+				  		<td colspan="5">Keynote 1</td>
+			  		</tr>
+
+			  		<tr class="ptime morning">
+				  		<td>11:00-12:00</td>
+				  		<td class="psession research">
+				  			Research I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime morning">
+				  		<td>12:00-13:30</td>
+				  		<td class="text-center" colspan="5">Lunch</td>
+			  		</tr>
+
+			  		<tr class="ptime afternoon">
+				  		<td>13:30-15:00</td>
+				  		<td class="psession research">
+				  			Research II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime afternoon">
+				  		<td>15:30-16:00</td>
+				  		<td class="text-center" colspan="5">Break</td>
+			  		</tr>
+
+			  		<tr class="ptime evening">
+				  		<td>16:00-17:30</td>
+				  		<td class="psession research">
+				  			Research III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime evening">
+				  		<td>18:00-21:00</td>
+				  		<td class="text-center" colspan="5">Dinner</td>
+			  		</tr>
+			 	</tbody>
+			</table>
+	</div>
+</section>
+
+<!-- ################################################################################  -->
+<section class="pday 2016-10-21">
+	<div class="panel panel-default">
+	  	<div class="panel-heading">
+			<h3 class="text-center">October 21st (Fri), 2016</h3>
+		</div>
+			<table class="table">
+				<thread>
+					<tr>
+						<th style="width:100px">Time</th>
+						<th class="text-center" colspan="5">Program</th>
+					</tr>
+			  	</thread>
+			  	<tbody>	
+			  		<tr class="ptime morning keynote">
+				  		<td>10:00-11:00</td>
+				  		<td colspan="5">Keynote 1</td>
+			  		</tr>
+
+			  		<tr class="ptime morning">
+				  		<td>11:00-12:00</td>
+				  		<td class="psession research">
+				  			Research I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application I
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime morning">
+				  		<td>12:00-13:30</td>
+				  		<td class="text-center" colspan="5">Lunch</td>
+			  		</tr>
+
+			  		<tr class="ptime afternoon">
+				  		<td>13:30-15:00</td>
+				  		<td class="psession research">
+				  			Research II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application II
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+			  		</tr>
+
+			  		<tr class="ptime afternoon">
+				  		<td>15:30-16:00</td>
+				  		<td class="text-center" colspan="5">Break</td>
+			  		</tr>
+
+			  		<tr class="ptime evening">
+				  		<td>16:00-17:30</td>
+				  		<td class="psession research">
+				  			Research III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession resource">
+				  			Resource III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  			</ul>
+				  		</td>
+				  		<td class="psession application">
+				  			Application III
+				  			<ul>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
+				  				<li><b>Topic</b> <i class="detail"> author 1 ....., author 2 ......., and author 3 ....., university ...... . </i></li>
 				  			</ul>
 				  		</td>
 			  		</tr>
