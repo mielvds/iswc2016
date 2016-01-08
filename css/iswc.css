@@ -186,6 +186,7 @@ table.iswc-submenu th h4{
 
 table.iswc-submenu  tr  td{
 	padding-left: 10px;
+	cursor: pointer;
 }
 
 /* slide */
