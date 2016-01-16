@@ -124,14 +124,22 @@ label.btn{
 		</div>
 
   		<div class="btn-group btn-group-justified" data-toggle="buttons">
+  			
   			<label id="btnEveryday" class="btn" to-show="pday">
 		    	<input type="radio" name="options" autocomplete="off" > Everyday
 		  	</label>
+			<label id="btnMon17" class="btn" to-hide="pday" to-show="2016-10-17">
+		    	<input type="radio" name="options" autocomplete="off" > Mon (17)
+		  	</label>
+			<label id="btnTue18" class="btn" to-hide="pday" to-show="2016-10-18">
+		    	<input type="radio" name="options" autocomplete="off" > Tue (18)
+		  	</label>
+		  	
 			<label id="btnWed19" class="btn" to-hide="pday" to-show="2016-10-19">
 		    	<input type="radio" name="options" autocomplete="off" > Wed (19)
 		  	</label>
 			<label id="btnThu20" class="btn" to-hide="pday" to-show="2016-10-20">
-		    	<input type="radio" name="options" autocomplete="off" > The (20)
+		    	<input type="radio" name="options" autocomplete="off" > Thu (20)
 		  	</label>
 		  	<label id="btnFri21" class="btn" to-hide="pday" to-show="2016-10-21">
 		    	<input type="radio" name="options" autocomplete="off"> Fri (21)
@@ -142,6 +150,7 @@ label.btn{
   			<label id="btnAllSessions" class="btn" to-show="psession" to-show-detail="no">
 		    	<input type="radio" name="options" autocomplete="off" > All sessions
 		  	</label>
+
 			<label id="btnResearch" class="btn" to-hide="psession" to-show="research" to-show-detail="yes">
 		    	<input type="radio" name="options" autocomplete="off" > Research
 		  	</label>
