@@ -1,15 +1,63 @@
 ---
 title: "Home"
-updated:   2015-09-11 17:38:49
+updated:   2016-03-15 17:38:49
 layout: default
 group: home
 status: published
 ---
+
+<!------- Slide ---------->
 <div class="slide">
   {% include slide.html %}
 </div>
 <div class="home">
+<hr/>
 
+
+<!------- KEYNOTE ---------->
+<h3 style="padding-bottom: 15px">Keynote speakers</h3>
+
+<div class="container-fluid">
+  	<div class="row">
+
+		<div class="col-md-4">
+			<img src="{{ site.baseurl }}/images/keynote/kitano.jpg"  width="200" alt="...">
+			
+			<p>
+				<h4><a href="#">Hiroaki Kitano</a></h4>
+				<strong>CEO</strong> of Sony Computer Science Labs <br/>
+				<strong>Professor</strong> at the Okinawa Institute of Science and Technology <br/>
+				<strong>President</strong> of the Systems Biology Institute. 
+			</p>
+
+			<hr class="hidden-lg hidden-md"/>
+		</div>
+		
+		<div class="col-md-4">
+			<img src="{{ site.baseurl }}/images/keynote/mckeown.png" width="200" alt="...">
+			
+			<p>
+				<h4><a href="#">Kathleen McKeown</a></h4>
+				<strong>Professor</strong> of Computer Science at Columbia University <br/>
+				<strong>Director</strong> of the Institute for Data Sciences and Engineering. 
+			</p>
+
+			<hr class="hidden-lg hidden-md"/>
+		</div>
+
+		<div class="col-md-4">
+			<img src="{{ site.baseurl }}/images/keynote/bizer.gif" width="200" alt="...">
+			<p>
+				<h4><a href="#">Christian Bizer</a></h4>
+				<strong>Professor</strong> at the Univesity of Mannheim <br/>
+				<strong>Chair</strong> of Web-based Systems <br/>
+				<strong>Director</strong> of the Institute of Computer Science and Business Informatics
+			</p>
+		</div>
+	</div>
+</div>
+
+<!------- MSG ---------->
 <hr/>
 <div class="jumbotron">
 	<div class="container">
@@ -19,6 +67,8 @@ status: published
   	</div>
 </div>
   
+<!------- Update ---------->
+
 <hr/>
   {% include news.html %}
 
