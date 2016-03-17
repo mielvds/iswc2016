@@ -263,3 +263,24 @@ footer{
 		padding-right:5px;
 	}
 }
+
+
+/* for print */
+@media print {
+	html, 
+	body {
+	    width: 1200px !important;
+	}
+
+	body div.iswc-wrap{
+		min-width:1000px !important;
+	}
+
+	body div.iswc-wrapper-right{
+		width:400px !important;
+	}
+
+	body div.iswc-wrapper-right iframe#twitter-widget-0{
+		display: none !important;
+	}
+}
