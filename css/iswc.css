@@ -169,6 +169,26 @@ div.iswc-chairs img.img-circle{
     margin-bottom: 15px;
 }
 
+table.iswc-pc{
+	width:90%;
+	margin-left: 20px
+}
+
+table.iswc-pc tr td:first-child{
+	font-weight: bold;
+	width:200px;
+}
+
+table.iswc-pc tr td:nth-child(2){
+	color:#888;
+}
+
+table.iswc-pc td{
+	border:none;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+
 /* submenu */
 
 .iswc-navbar-back{
@@ -284,3 +304,4 @@ footer{
 		display: none !important;
 	}
 }
+
