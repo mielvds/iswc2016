@@ -8,6 +8,8 @@ status: published
 ---
 <h1>{{ page.title }}</h1>
 
+<h3 style="margin-bottom:15px">Information</h3>
+
 <table class="table">
   <tr>
     <th rowspan="2" width="40%">Hotel / Access</th>
@@ -207,28 +209,40 @@ status: published
 
 </table>
 
+<hr/>
 
 <!-- MAP -->
+
+<h3 style="margin-bottom:15px">Map</h3>
+
+( Note: The red pin <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" /> shows the conference venue. )
+
+<br/><br/>
 
 <script src="http://maps.google.com/maps/api/js?sensor=false"  type="text/javascript"></script>
 <div id="map" style="width: 100%; height: 500px;"></div>
 
   <script type="text/javascript">
-    var locations = [
-      ['Kobe Portpia Hotel', 34.665083, 135.214274],
-      ['Ariston Hotel Kobe , 34.667201, 135.212383],
-      ['Hotel Pearl City Kobe', 34.667922, 135.216181],
-      ['ANA Crowne Plaza Kobe', 34.704620, 135.195313],
-      ['Sannomiya Terminal Hotel', 34.694014, 135.194810],
 
-      ['Kobe Sannomiya Tokyu REI Hotel', 34.694502, 135.196827],
-      ['Daiwa Roynet Hotel Kobe-Sannomiya', 34.693069, 135.198551],
-      ['Sanside Hotel', 34.695290, 135.198923]
+    function pinSymbol(color) {
+      return "http://maps.google.com/mapfiles/ms/icons/" + color + "-dot.png"
+    }
+
+
+    var locations = [
+      ['Kobe Portpia Hotel', 34.665083, 135.214274, "red"],
+      ['Ariston Hotel Kobe' , 34.667201, 135.212383, "blue"],
+      ['Hotel Pearl City Kobe', 34.667922, 135.216181, "blue"],
+      ['ANA Crowne Plaza Kobe', 34.704620, 135.195313, "blue"],
+      ['Sannomiya Terminal Hotel', 34.694014, 135.194810, "blue"],
+      ['Kobe Sannomiya Tokyu REI Hotel', 34.694502, 135.196827, "blue"],
+      ['Daiwa Roynet Hotel Kobe-Sannomiya', 34.693069, 135.198551, "blue"],
+      ['Sanside Hotel', 34.695290, 135.198923, "blue"]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
-      center: new google.maps.LatLng(34.6770834,135.2021333),
+      zoom: 13,
+      center: new google.maps.LatLng(34.680403, 135.202908),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -239,7 +253,8 @@ status: published
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
+        map: map,
+        icon:pinSymbol(locations[i][3])
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
