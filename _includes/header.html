@@ -89,12 +89,12 @@
     $(window).bind('scroll', moveNavTop);
     $(window).bind('touchmove', moveNavTop);
 
-    if(is_touch_device()) imailgen();
+    if(is_touch_device()) imailgen(); //generate mailto if touch screen
 
   });
 
   function imailgen(){
-    $("span.hmail").remove()
+    $("span.hmail").remove(); //Remove all class hmail
 
     $("imail").each(function(){
       var emi = $(this).text();
