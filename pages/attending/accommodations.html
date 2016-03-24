@@ -219,34 +219,35 @@ status: published
 
 <h3 style="margin-bottom:15px">Map</h3>
 
-( Note: The red pin <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" /> shows the conference venue. )
+( Note: The red pin <img src="{{ site.baseurl }}/images/pin-iswc.png" height="40px" /> shows the conference venue. )
 
 <br/><br/>
 
 <script src="http://maps.google.com/maps/api/js?sensor=false"  type="text/javascript"></script>
-<div id="map" style="width: 100%; height: 500px;margin-bottom: 20px"></div>
+<div id="map" style="width: 100%; height: 800px;margin-bottom: 20px"></div>
 
   <script type="text/javascript">
 
     function pinSymbol(color) {
-      return "http://maps.google.com/mapfiles/ms/icons/" + color + "-dot.png"
+      return "{{ site.baseurl }}/images/pin-" + color + ".png" ;
+      //return "http://maps.google.com/mapfiles/ms/icons/" + color + "-dot.png" ;
     }
 
 
     var locations = [
-      ['Kobe Portpia Hotel', 34.665083, 135.214274, "red"],
-      ['Ariston Hotel Kobe' , 34.667201, 135.212383, "blue"],
-      ['Hotel Pearl City Kobe', 34.667922, 135.216181, "blue"],
-      ['ANA Crowne Plaza Kobe', 34.704620, 135.195313, "blue"],
-      ['Sannomiya Terminal Hotel', 34.694014, 135.194810, "blue"],
-      ['Kobe Sannomiya Tokyu REI Hotel', 34.694502, 135.196827, "blue"],
-      ['Daiwa Roynet Hotel Kobe-Sannomiya', 34.693069, 135.198551, "blue"],
-      ['Sanside Hotel', 34.695290, 135.198923, "blue"]
+      ['Kobe Portpia Hotel <br/> <strong>ISWC2016</strong> Venue', 34.665083, 135.214274, "iswc"],
+      ['Ariston Hotel Kobe' , 34.667201, 135.212383, "hotel"],
+      ['Hotel Pearl City Kobe', 34.667922, 135.216181, "hotel"],
+      ['ANA Crowne Plaza Kobe', 34.704620, 135.195313, "hotel"],
+      ['Sannomiya Terminal Hotel', 34.694014, 135.194810, "hotel"],
+      ['Kobe Sannomiya Tokyu REI Hotel', 34.694502, 135.196827, "hotel"],
+      ['Daiwa Roynet Hotel Kobe-Sannomiya', 34.693069, 135.198551, "hotel"],
+      ['Sanside Hotel', 34.695290, 135.198923, "hotel"]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 13,
-      center: new google.maps.LatLng(34.680403, 135.202908),
+      zoom: 14,
+      center: new google.maps.LatLng(34.684982, 135.200880),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
