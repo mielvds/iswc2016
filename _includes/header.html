@@ -88,7 +88,25 @@
     }
     $(window).bind('scroll', moveNavTop);
     $(window).bind('touchmove', moveNavTop);
+
+    if(is_touch_device()) imailgen();
+
   });
+
+  function imailgen(){
+    $("span.hmail").remove()
+
+    $("imail").each(function(){
+      var emi = $(this).text();
+      $(this).html("<a href='mailto:" + emi + "' >" + emi + "</a>");
+
+    });
+  }
+
+  function is_touch_device() {
+    return 'ontouchstart' in window        // works on most browsers 
+        || 'onmsgesturechange' in window;  // works on IE10 with some false positives
+  };
 </script>
 
 <!--<header class="site-header">
