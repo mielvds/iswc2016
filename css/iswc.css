@@ -217,7 +217,7 @@ div.days{
 
 div.days d {
 	font-family: monospace;
-	font-size: 8pt;
+	font-size: 0.8em;
 	text-align: center;
     border: 1px solid #ddd;
     width: 20px;
