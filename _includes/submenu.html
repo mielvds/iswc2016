@@ -5,17 +5,33 @@
 		{% assign page_item = mainpages[0] %}
 		<div class="panel panel-default">
 			<table class="iswc-submenu table table-hover">
-				<tr>
-					<th onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" >
-						<h4>{{ page_item.title }}</h4>
+				<!--<tr>
+					<th class="allign-center" style="background-color:#333; color:#fff">
+						<h4>Submenu</h4>
 					</th>
+				</tr>-->
+				<tr
+					{% if page_item.title == page.title %}
+						class="iswc-submenu-highlight"
+					{% endif %}
+				>
+					<td onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" >
+						<h4>{{ page_item.title }}</h4>
+					</td>
 				</tr>
 				{% for page_item in subpages %}
-					<tr onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" >
+					<tr onclick="document.location = '{{ site.baseurl }}/{{ page_item.path }}'" 
+						{% if page_item.title == page.title %}
+							class="iswc-submenu-highlight"
+						{% endif %}
+					>
 						<td><span style="float:left;top:2px" class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 						<div style="padding-left:20px">{{ page_item.title }}</div></td>
 					</tr>
 				{% endfor %}
+				<!--<tr>
+					<td style="background-color:#333; height:3px;font-size:1pt"></td>
+				</tr>-->
 			</table>	
 		</div>	
 		<hr/>
