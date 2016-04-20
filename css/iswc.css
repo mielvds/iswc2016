@@ -216,6 +216,10 @@ table tr.iswc-submenu-highlight{
 	color:#fff;
 }
 
+table tr.iswc-overdue{
+	color:#AAA;
+}
+
 /* other */
 div.days{
 	margin-top: 5px
