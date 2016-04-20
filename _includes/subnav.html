@@ -1,0 +1,15 @@
+
+{% assign subpages = (site.pages | where: "menu", "sub" | where: "group", nav_group | where:"status", "published" | sort: "title" | sort: "ordered") %}
+{% if subpages.size >0 %}
+	{% assign mainpages = (site.pages | where: "menu", "main" | where: "group", nav_group) %}
+	{% if mainpages.size >0 %}
+		{% assign page_item = mainpages[0] %}
+		<ul class="dropdown-menu">
+			<li><a href='{{ site.baseurl }}/{{ page_item.path }}'><h4>{{ page_item.title }}</h4> main page</a></li>
+			<li class="divider"></li>
+			{% for page_item in subpages %}
+				<li><a href='{{ site.baseurl }}/{{ page_item.path }}'>{{ page_item.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endif %}
