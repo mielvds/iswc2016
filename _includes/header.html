@@ -133,7 +133,9 @@ jQuery(function($) {
     //Navbar in mobile
     $('#bs-navbar').on('show.bs.collapse', function () {
         var navTop = $('#iswc-nav-dummy').offset().top;
-        $("body").scrollTop(navTop);
+        if( $(window).scrollTop() > navTop ){
+          $("body").scrollTop(navTop);
+        }
     });
 });
 </script>
