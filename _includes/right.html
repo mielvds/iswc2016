@@ -64,9 +64,15 @@
 {% endif %}
 
 {% if (page.group == "calls" or page.group == "deadline") %}
-   {% include clocks.html %}
+   {% include clocks-hawii.html %}
    <hr/>
 {% endif %}
+
+{% if (page.group == "program" or page.group == "attending") %}
+   {% include clocks-jp.html %}
+   <hr/>
+{% endif %}
+
 
 
 <h4>Sponsors</h4>
