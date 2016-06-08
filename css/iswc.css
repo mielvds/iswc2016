@@ -291,6 +291,19 @@ div.panel .table tr td:first-child{
 	padding-left:20px;
 }
 
+/* for ADS at bottom */
+section.iswc-ads div.iswc-ads-items,
+section.iswc-ads h4, 
+section.iswc-ads hr{
+   clear: left;
+}
+
+section.iswc-ads div.iswc-ads-items div.panel{
+	width:200px;
+	float:left;
+	margin:10px;
+}
+
 footer{
 	/* background: -webkit-linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* For Safari 5.1 to 6.0 */
   	/* background: -o-linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* For Opera 11.1 to 12.0 */
@@ -312,6 +325,29 @@ footer{
 
 /* for print */
 @media print {
+
+	.force-print-yes{
+		display:block !important;
+	}
+
+	.force-print-no{
+		display:none !important;
+	}
+
+	body div.iswc-wrap{
+		min-width:90% !important;
+	}
+
+	div.iswc-wrapper-left{
+		border:0 !important;
+	}
+
+
+
+	footer{
+		background-color: #fafafa !important;
+	}
+	/*
 	html, 
 	body {
 	    width: 1200px !important;
@@ -328,5 +364,8 @@ footer{
 	body div.iswc-wrapper-right iframe#twitter-widget-0{
 		display: none !important;
 	}
+	*/
+
+
 }
 
