@@ -347,8 +347,13 @@ footer{
 		border-bottom: 10px solid #444;
 	}
 
-	footer{
+	div#iswc-banner-default a[href]:after {
+    	content: none !important;
+	}
+
+	footer {
 		background-color: #dadada !important;
+		border-top: 1px solid #444 !important;
 	}
 	/*
 	html, 
