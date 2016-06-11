@@ -216,8 +216,20 @@ table tr.iswc-submenu-highlight{
 	color:#fff;
 }
 
+table tr.iswc-overdue a{
+	color:#AAA;
+	text-decoration: underline;
+}
+
 table tr.iswc-overdue{
 	color:#AAA;
+	background: repeating-linear-gradient(
+	  45deg,
+	  #fff,
+	  #fff 2px,
+	  #f0f0f0 2px,
+	  #fcfcfc 4px
+	);
 }
 
 /* other */
