@@ -25,22 +25,23 @@ status: draft
 	var termPattern = "";
     
     function filterText(_this){
-        // Show only matching TR, hide rest of them
+        // Clear all
         $.each($("table.iswc-paper div"), function(){
 	    	$(this).html( $(this).text() );
 	    });
 
-	    
+        // Show only matching TR, hide rest of them
+    	$.each($("table.iswc-paper tr:not(.iswc-last-row)"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1){
+               $(this).fadeOut();
+            }else{
+               $(this).fadeIn();                
+            }
+        });
+
+        //Highlight
         if($(_this).val().trim().length>0){
 	        termPattern = new RegExp('(' + $(_this).val().toLowerCase() + ')', 'ig');
-
-	        $.each($("table.iswc-paper tr:not(.iswc-last-row)"), function() {
-	            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1){
-	               $(this).fadeOut();
-	            }else{
-	               $(this).fadeIn();                
-	            }
-	        });
 
 	        $("tr.iswc-last-row").show();
 
@@ -63,7 +64,7 @@ status: draft
 		});
 	}
 </script>
-
+<!--
 <section id="filter-panel" class="allign-right">
 	<form class="form-inline">
 	  	<div class="form-group">
@@ -75,6 +76,16 @@ status: draft
 </section>
 
 <hr/>
+-->
+
+<div class="alert alert-warning alert-dismissible fade in" role="alert"> 
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button> 
+	Note: This page has NOT been annouced yet.
+ </div>
+<br/>
+
 <!-- ################################################################################  -->
 
 <h3 style="padding-bottom: 15px">Research Track</h3>
