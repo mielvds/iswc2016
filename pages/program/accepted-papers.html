@@ -1,0 +1,177 @@
+---
+title: "Accepted Papers"
+updated:   2016-06-30 00:00:00
+layout: default
+group: program
+menu: sub
+ordered: 2
+status: draft
+---
+
+<h1>{{ page.title }}</h1>
+
+<!-- ################################################################################  -->
+<style>
+	span.iswc-string-match{
+	 	background-color:#f8dda9;
+	 	border:1px solid #edd19b;
+	 	margin:-1px;
+		color:#390705;
+	}
+</style>
+
+<script>
+
+	var termPattern = "";
+    
+    function filterText(_this){
+        // Show only matching TR, hide rest of them
+        $.each($("table.iswc-paper div"), function(){
+	    	$(this).html( $(this).text() );
+	    });
+
+	    
+        if($(_this).val().trim().length>0){
+	        termPattern = new RegExp('(' + $(_this).val().toLowerCase() + ')', 'ig');
+
+	        $.each($("table.iswc-paper tr:not(.iswc-last-row)"), function() {
+	            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1){
+	               $(this).fadeOut();
+	            }else{
+	               $(this).fadeIn();                
+	            }
+	        });
+
+	        $("tr.iswc-last-row").show();
+
+	        walk($("table.iswc-paper"));
+    	}
+    }
+
+    function walk(elem) {
+
+		elem.contents().each(function() {
+
+			if (this.nodeType == 3) { // text node
+
+				if (termPattern.test(this.nodeValue)) {
+					$(this).replaceWith(this.nodeValue.replace(termPattern, '<span class="iswc-string-match">$1</span>'));
+				}
+			} else {
+				walk($(this));
+			}
+		});
+	}
+</script>
+
+<section id="filter-panel" class="allign-right">
+	<form class="form-inline">
+	  	<div class="form-group">
+		    <div class="col-sm-5">
+		      	<input type="text" class="form-control" id="filterTr" onkeyup="filterText(this);" placeholder="Filter" />
+		    </div>
+	 	</div>
+	</form>
+</section>
+
+<hr/>
+<!-- ################################################################################  -->
+
+<h3 style="padding-bottom: 15px">Research Track</h3>
+
+<table class="table iswc-paper">
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Jane Poe, John Doe, Richard Roe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Brett Boe, Carla Coe, Donna Doe, Frank Foe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Sed sollicitudin, lorem tempor pulvinar molestie, nunc purus malesuada metus, vel euismod eros ipsum et dui
+			</div>
+			<div class="iswc-paper-authors">Robert Roe, Mark Moe, Larry Loe</div>
+	</td></tr>
+
+	<tr class="iswc-last-row"><td></td></tr>
+
+</table>
+
+<hr/>
+
+<!-- ################################################################################  -->
+
+<h3 style="padding-bottom: 15px">Resources Track</h3>
+
+<table class="table iswc-paper">
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Jane Poe, John Doe, Richard Roe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Brett Boe, Carla Coe, Donna Doe, Frank Foe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Sed sollicitudin, lorem tempor pulvinar molestie, nunc purus malesuada metus, vel euismod eros ipsum et dui
+			</div>
+			<div class="iswc-paper-authors">Robert Roe, Mark Moe, Larry Loe</div>
+	</td></tr>
+
+	<tr class="iswc-last-row"><td></td></tr>
+
+</table>
+
+<hr/>
+
+<!-- ################################################################################  -->
+
+<h3 style="padding-bottom: 15px">Applications Track</h3>
+
+<table class="table iswc-paper">
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Jane Poe, John Doe, Richard Roe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Duis placerat mattis est, euismod porttitor purus
+			</div>
+			<div class="iswc-paper-authors">Brett Boe, Carla Coe, Donna Doe, Frank Foe</div>
+	</td></tr>
+
+	<tr><td>
+			<div class="iswc-paper-title">
+				Sed sollicitudin, lorem tempor pulvinar molestie, nunc purus malesuada metus, vel euismod eros ipsum et dui
+			</div>
+			<div class="iswc-paper-authors">Robert Roe, Mark Moe, Larry Loe</div>
+	</td></tr>
+
+	<tr class="iswc-last-row"><td></td></tr>
+
+</table>
+
+
+
+
