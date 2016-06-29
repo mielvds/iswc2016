@@ -235,6 +235,12 @@ table tr.iswc-submenu-highlight{
 	color:#fff;
 }
 
+table tr.iswc-submenu-highlight:hover{
+	background-color:#444;
+	color:#fff;
+}
+
+
 table tr.iswc-overdue a{
 	color:#AAA;
 	text-decoration: underline;
