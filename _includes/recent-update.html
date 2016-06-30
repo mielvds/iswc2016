@@ -1,0 +1,36 @@
+  <h1 class="page-heading">Recently updated</h1>
+
+
+  <table class="table table-hover">
+  {% assign iswcpages = (site.pages | where: "status", "published" | sort: "updated") %}
+  {% assign counter = 0 %}
+  {% for page in iswcpages reversed  %}
+    {% assign counter=counter | plus:1 %}  
+    {% if counter > 5 %}
+      {% assign rclass="iswc-recent-over hide" %}
+    {% endif %}
+    <tr class="iswc-recent iswc-news row {{rclass}}" onclick="document.location = '{{ site.baseurl }}/{{ page.path }}'">
+      <td class="iswc-news-label"><strong><a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a></strong></td>
+      <td class="iswc-news-date"><span class="text-muted">{{ page.updated | date: "%b %-d, %Y" }}</span></td>
+    </tr>
+  {% endfor %}
+
+    <tr onclick="$('.iswc-recent-over').toggleClass('hide');" class="iswc-recent-over" style="padding-top:5px; text-align:right" ><td colspan="3">more <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></td></tr>
+    <tr onclick="$('.iswc-recent-over').toggleClass('hide');" class="iswc-recent-over hide" style="padding-top:5px; text-align:right" ><td colspan="3">less <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></td></tr>
+  </table>
+
+<!--
+  <hr/>
+  <h1 class="page-heading">News</h1>
+
+  <div class="container-fluid">
+    {% for post in site.posts %}
+    <div class="iswc-news row">
+      <div class="iswc-news-label col-md-8"><strong><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></strong></div>
+      <div class="iswc-news-date col-md-4"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></div>
+    </div>
+  {% endfor %}
+  </div>
+-->
+
+  <!-- <p style="padding-top:20px" class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

@@ -10,60 +10,8 @@
 
 
 {% if page.group == "home" or page.group == "deadline" %}
-<h4 >Important News</h4>
-<ul class="iswc-right-emph-date"> 
-	<li>
-		<span style="color:red">
-			Lists of
-			<a class="btn btn-danger btn-xs active" href="{{ site.baseurl }}/pages/program/workshops.html" role="button">Workshops</a>
-			and
-			<a class="btn btn-danger btn-xs active" href="{{ site.baseurl }}/pages/program/tutorials.html" role="button">Tutorials</a>
-			are announced!
-		</span>
-	</li>
-
-	<li>
-		<span>
-			Keynote Speaker:
-		</span>
-		<br/>
-		<a href="{{ site.baseurl }}/pages/program/keynote-kitano.html">Hiroaki Kitano</a>,
-		<a href="{{ site.baseurl }}/pages/program/keynote-mckeown.html">Kathleen McKeown</a>, and
-		<a href="{{ site.baseurl }}/pages/program/keynote-bizer.html">Christian Bizer</a>
-	</li>
-
-	<li>
-		<span>
-			Call for Papers & Proposals is
-			<a href="{{ site.baseurl }}/pages/calls.html">here</a>
-			!
-		</span>
-	</li>
-
-	<!--
-	<li>
-		<span>ISWC2016 handout!</span>
-		<br/>
-		<a href="{{ site.baseurl }}/files/iswc2016-flyer.pdf" target="_blank" ><img width="50px" src="{{ site.baseurl }}/images/iswc2016-flyer-xs.png" style="margin-top:5px" /></a>
-	</li>
-	
-	<li>
-		Workshop and Tutorial Proposals<br/>
-		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		<span class="iswc-right-emph-date">(will be announced)</span>
-	</li>
-	<li>
-		Standard Track Abstracts<br/>
-		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		<span class="iswc-right-emph-date">(will be announced)</span>
-	</li>
-	<li>
-		Standard Track Papers<br/>
-		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		<span class="iswc-right-emph-date">(will be announced)</span>
-	</li>
-	-->
-</ul>
+	<h4 >Important News</h4>
+	{% include news.html %}
 <hr/>
 {% endif %}
 
