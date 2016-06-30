@@ -1,6 +1,13 @@
 <div class="wrapper">
 
+<!-- ####################### Sub Menu ########################### -->
+
+
 {% include submenu.html %}
+
+
+<!-- ####################### News ########################### -->
+
 
 {% if page.group == "home" or page.group == "deadline" %}
 <h4 >Important News</h4>
@@ -60,24 +67,17 @@
 <hr/>
 {% endif %}
 
-<h4>Sponsors</h4>
-<!-- <h4 style="color:#697998; font-size:1.5em"><strong>Platinum Sponsors</strong></h4> -->
-<h4 style="color:#aa6708"><strong>Gold Sponsors</strong></h4>
-<div class="panel panel-default">
-  <div class="panel-body allign-center">
-	<a target="_blank" href="http://www.nttr.co.jp/english/">
-		<div>
-			<img src="{{ site.baseurl }}/images/sponsors/nttr.png" width="60%"/>
-		</div>
-		<div style="margin-top:10px; font-size:15pt; color:black">NTT Resonant</div>
-	</a>
-	
-  </div>
-</div>
-<!-- <h4 style="color:#888">Silver Sponsors</h4> -->
+<!-- ####################### Sponsors ########################### -->
+
+
+{% include sponsors.html %}
+
 <a href="{{ site.baseurl }}/pages/sponsorship.html" class="btn btn-primary btn-block active" role="button">Become a Sponsor</a>
 
 <hr/>
+
+<!-- ####################### Widgets ########################### -->
+
 
 {% if page.group == "attending" %}
    {% include yen-exchange.html %}
@@ -94,27 +94,15 @@
    <hr/>
 {% endif %}
 
+<!-- ####################### Organizers ########################### -->
 
 
-<h4>Organizers</h4>
-<div class="panel panel-default">
-  <div class="panel-body">
-	<a target="_blank" href="http://swsa.semanticweb.org">
-		<img src="{{ site.baseurl }}/images/organizers/sawa.png" width="100%"/>
-	</a>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-body">
-	<a target="_blank" href="http://linkedopendata.jp/?page_id=267">
-		<img src="{{ site.baseurl }}/images/organizers/lodi.png" width="100%"/>
-	</a>
-  </div>
-</div>
-
+{% include organizers.html %}
 
 <hr/>
+
+<!-- ####################### TWITTER ########################### -->
+
 
 <a class="twitter-timeline" href="https://twitter.com/ISWC2016" data-widget-id="649874606023577600" height="500">Tweets by @ISWC2016</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -130,3 +118,6 @@
 		</a>
 	</div>
 </div>
+
+<!-- ####################### END ########################### -->
+

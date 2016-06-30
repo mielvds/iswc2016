@@ -337,8 +337,10 @@ section.iswc-ads hr{
 
 section.iswc-ads div.iswc-ads-items div.panel{
 	width:200px;
+	height: 100px;
 	float:left;
 	margin:10px;
+	vertical-align:middle;
 }
 
 footer{
