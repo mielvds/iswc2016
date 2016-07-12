@@ -1,6 +1,6 @@
 ---
 title: "Important Dates"
-updated:   2016-06-18 00:00:00
+updated:   2016-07-12 00:00:00
 layout: default
 group: deadline
 menu: main
@@ -85,27 +85,28 @@ status: published
 	    <td class="iswc-news-date">July 01, 2016</td>
 	</tr>
 
-	<!-- ********** NEXT *********** -->
-	<tr class="info"> 
-		<td class="allign-center" colspan="2"><h4 style="margin:0">Next ...</h4></td>
-	</tr>
-	<!-- ********** NEXT *********** -->
-
-
-	<tr>
+	<tr class="iswc-overdue">
 	    <td><a href="{{site.baseurl}}/pages/calls/posters-demos.html">Poster/Demo</a> submissions Due</td>
 	    <td class="iswc-news-date">July 07, 2016</td>
 	</tr>
 
-	<tr>
+	<tr class="iswc-overdue">
 	    <td><a href="{{site.baseurl}}/pages/program/workshops.html">Workshop</a> papers due</td>
 	    <td class="iswc-news-date">July 07, 2016</td>
 	</tr>
 
-	<tr>
+	<tr class="iswc-overdue">
 	    <td>Metadata for Research, Applications, Resource tracks due</td>
 	    <td class="iswc-news-date">July 08, 2016</td>
 	</tr>
+
+
+	<!-- ********** NEXT *********** -->
+	<tr id="next-item" class="info"> 
+		<td class="allign-center" colspan="2"><h4 style="margin:0">Next ...</h4></td>
+	</tr>
+	<!-- ********** NEXT *********** -->
+
 
 	<tr>
 	    <td>Camera-ready papers for Research, Applications, Resource tracks due</td>
@@ -174,3 +175,13 @@ status: published
 
   </tbody>
  </table>
+
+
+ <!-- ################################################## -->
+<script>
+	jQuery(document).ready(function(){
+	   $('html, body').delay( 2000 ).animate({
+	        scrollTop: $("#next-item").offset().top - 100
+	    }, 2000);
+	});
+</script>
