@@ -198,14 +198,16 @@ table.iswc-paper{
 }
 
 table.iswc-paper .iswc-paper-title{
+	margin-top: 7px;
+	font-size: 1.2em;
 	font-weight: bold;
 }
 
 table.iswc-paper .iswc-paper-authors{
-	margin-top:  5px;
-	padding-left: 7px;
-	color: #555;
-	font-style: italic;
+	margin-top: 10px;
+	margin-bottom: 7px;
+	padding-left: 25px;
+	color: #888;
 }
 
 /* submenu */
