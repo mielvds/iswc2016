@@ -8,7 +8,7 @@ ordered: 2
 status: draft
 ---
 
-<h1>{{ page.title }}</h1>
+<h1 id="iswc-page-title">{{ page.title }}</h1>
 
 <!-- ################################################################################  -->
 <style>
@@ -17,6 +17,16 @@ status: draft
 	 	border:1px solid #edd19b;
 	 	margin:-1px;
 		color:#390705;
+	}
+
+	div.iswc-h2-wrap{
+		position:relative;
+	}
+
+	div.iswc-h2-wrap a{
+		position:absolute;
+		top:10px;
+		right:20px;
 	}
 </style>
 
@@ -63,6 +73,12 @@ status: draft
 			}
 		});
 	}
+
+	function scrollToId(target_id){
+		$('html, body').animate({
+	        scrollTop: $("#"+target_id).offset().top - 105
+	    }, 800);
+	}
 </script>
 <!--
 <section id="filter-panel" class="allign-right">
@@ -76,7 +92,7 @@ status: draft
 </section>
 
 <hr/>
--->
+
 
 <div class="alert alert-warning alert-dismissible fade in" role="alert"> 
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -86,9 +102,21 @@ status: draft
  </div>
 <br/>
 
+-->
+
+<ul id="top-menu">
+	<li><a href="#" onclick="scrollToId('iswc-reserarch')">Research Track</a></li>
+	<li><a href="#" onclick="scrollToId('iswc-resource')">Resources Track</a></li>
+	<li><a href="#" onclick="scrollToId('iswc-application')">Applications Track</a></li>
+	<li><a href="#" onclick="scrollToId('iswc-journal')">Journal Track</a></li>
+</ul>
+
 <!-- ################################################################################  -->
 
-<h2 id="iswc-research" style="padding-bottom: 15px">Research Track</h2>
+<div class="iswc-h2-wrap">
+	<h2 id="iswc-research" style="padding-bottom: 15px">Research Track</h2>
+	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
+</div>
 
 <table class="table iswc-paper">
 
@@ -361,8 +389,11 @@ status: draft
 <hr/>
 
 <!-- ################################################################################  -->
+<div class="iswc-h2-wrap">
+	<h2 id="iswc-resource" style="padding-bottom: 15px">Resources Track</h2>
+	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
+</div>
 
-<h2 id="iswc-resource" style="padding-bottom: 15px">Resources Track</h2>
 
 <table class="table iswc-paper">
 
@@ -615,7 +646,11 @@ status: draft
 
 <!-- ################################################################################  -->
 
-<h2 id="iswc-application" style="padding-bottom: 15px">Applications Track</h2>
+<div class="iswc-h2-wrap">
+	<h2 id="iswc-application" style="padding-bottom: 15px">Applications Track</h2>
+	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
+</div>
+
 
 <table class="table iswc-paper">
 
@@ -770,8 +805,10 @@ status: draft
 
 <!-- ################################################################################  -->
 
-
-<h2 id="iswc-journal" style="padding-bottom: 15px">Journal Track</h2>
+<div class="iswc-h2-wrap">
+	<h2 id="iswc-journal" style="padding-bottom: 15px">Journal Track</h2>
+	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
+</div>
 
 <table class="table iswc-paper">
 
