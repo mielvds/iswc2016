@@ -9,6 +9,17 @@ status: published
 <h1>{{ page.title }}</h1>
 <br/>
 
+<!-- ################################################## -->
+<script>
+	function scrollToId(target_id){
+		$('html, body').animate({
+	        scrollTop: $("#"+target_id).offset().top - 100
+	    }, 800);
+	}
+</script>
+<!-- ################################################## -->
+
+
 <!------- News ---------->
 <div class="hidden-lg hidden-md"> 
 	<div class="panel panel-default">
@@ -25,13 +36,25 @@ status: published
 
 <!------- Content ---------->
 
-
+<!--
 <div class="alert alert-warning alert-dismissible fade in" role="alert"> 
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">×</span>
 	</button> 
 	Note: All deadlines are midnight Hawaii time!
  </div>
+ -->
+
+<hr/>
+ <p class="text-center">
+  <a class="btn btn-primary btn-lg" style="color:#fff; href="#" onclick="scrollToId('next-item')">
+      Go to Upcoming Schedule !
+  </a>
+</p>
+<hr/>
+
+ <div class="allign-right" style="color:red">All deadlines are midnight Hawaii time!</div>
+
 
 <table class="table table-hover">
   <thead>
@@ -194,11 +217,4 @@ status: published
  </table>
 
 
- <!-- ################################################## -->
-<script>
-	jQuery(document).ready(function(){
-	   $('html, body').delay( 2000 ).animate({
-	        scrollTop: $("#next-item").offset().top - 100
-	    }, 2000);
-	});
-</script>
+ 
