@@ -7,7 +7,6 @@ menu: main
 status: published
 ---
 <h1>{{ page.title }}</h1>
-<br/>
 
 <!-- ################################################## -->
 <script>
@@ -20,8 +19,17 @@ status: published
 <!-- ################################################## -->
 
 
+<hr/>
+ <p class="text-center">
+  <a class="btn btn-primary btn-lg" style="color:#fff; href="#" onclick="scrollToId('next-item')">
+      Go to Upcoming Schedule !
+  </a>
+</p>
+
 <!------- News ---------->
 <div class="hidden-lg hidden-md"> 
+	<hr/>
+
 	<div class="panel panel-default">
 		<div class="panel-heading" >
 			<h3>Important News</h3>
@@ -30,8 +38,6 @@ status: published
 			{% include news.html %}
 		</div>
 	</div>
-
-	<hr/>
 </div>
 
 <!------- Content ---------->
@@ -45,12 +51,6 @@ status: published
  </div>
  -->
 
-<hr/>
- <p class="text-center">
-  <a class="btn btn-primary btn-lg" style="color:#fff; href="#" onclick="scrollToId('next-item')">
-      Go to Upcoming Schedule !
-  </a>
-</p>
 <hr/>
 
  <div class="allign-right" style="color:red">All deadlines are midnight Hawaii time!</div>
