@@ -1,0 +1,16 @@
+<table class="table iswc-paper">
+
+	{% for paper in iswc_papers %}
+		<tr>
+			<td>
+				<div class='iswc-paper-title'>
+					{{ paper.Title }}
+				</div>
+				<div class='iswc-paper-authors'>
+					{{ paper.Authors }}
+				</div>
+			</td>
+		</tr>
+	{% endfor %}
+
+</table>
