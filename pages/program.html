@@ -40,6 +40,46 @@ status:   published
   .table > tbody > tr > td.iswc-parallel-time{
     padding-top:17px;
   }
+
+  /* Track Symbol */
+
+  ul.iswc-session-list{
+    list-style: none;
+  }
+
+  ul.iswc-session-list li{
+    position: relative;
+  }
+
+  ul.iswc-session-list li:before{
+    position: absolute;  
+    top: 0;  
+    margin: 1px 0 0 -25px;
+    font-size: 0.8em;    
+    display: inline-block;
+    font-family: monospace;
+  }
+
+  ul.iswc-session-list li.iswc-session-research:before{
+    color: #00661a;  
+    content: "[R]";
+  }
+
+  ul.iswc-session-list li.iswc-session-resource:before{
+    color: #0086b3;  
+    content: "[S]";
+  }
+
+  ul.iswc-session-list li.iswc-session-application:before{
+    color: #b32d00;  
+    content: "[A]";
+  }
+
+  ul.iswc-session-list li.iswc-session-journal:before{
+    color: #b38600;  
+    content: "[J]";
+  }
+
 </style>
 
 <!-- ################################################## -->
@@ -142,11 +182,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Knowledge Graphs</h4>
-            <ul>
-              <li>VoldemortKG: Mapping Schema.org Entities to Linked Open Data</li>
-              <li>Building and Exploring an Enterprise Knowledge Graph for Investment Analysis</li>
-              <li>DeFacto - Temporal and multilingual Deep Fact Validation</li>
-              <li>Linked Data (in resourceless) Platforms: a mapping for Constrained Application Protocol</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-resource">VoldemortKG: Mapping Schema.org Entities to Linked Open Data</li>
+              <li class="iswc-session-application">Building and Exploring an Enterprise Knowledge Graph for Investment Analysis</li>
+              <li class="iswc-session-journal">DeFacto - Temporal and multilingual Deep Fact Validation</li>
+              <li class="iswc-session-resource">Linked Data (in resourceless) Platforms: a mapping for Constrained Application Protocol</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -154,11 +194,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Knowledge Presentation</h4>
-            <ul>
-              <li>Knowledge Representation on the Web revisited: the Case for Prototypes</li>
-              <li>Ontologies for Knowledge Graphs: Breaking the Rules</li>
-              <li>Can you imagine... a language for combinatorial creativity?</li>
-              <li>Expressive Multi-Level Modeling for the Semantic Web</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Knowledge Representation on the Web revisited: the Case for Prototypes</li>
+              <li class="iswc-session-research">Ontologies for Knowledge Graphs: Breaking the Rules</li>
+              <li class="iswc-session-research">Can you imagine... a language for combinatorial creativity?</li>
+              <li class="iswc-session-research">Expressive Multi-Level Modeling for the Semantic Web</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -166,11 +206,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Interaction</h4>
-            <ul>
-              <li>Seed, an End-user Text Composition Tool for the Semantic Web</li>
-              <li>Benchmarking End-User Structured Data Search and Exploration</li>
-              <li>Visual query interfaces for semantic datasets: an evaluation study</li>
-              <li>Affective Graphs: The Visual Appeal of Linked Data</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Seed, an End-user Text Composition Tool for the Semantic Web</li>
+              <li class="iswc-session-resource">Benchmarking End-User Structured Data Search and Exploration</li>
+              <li class="iswc-session-journal">Visual query interfaces for semantic datasets: an evaluation study</li>
+              <li class="iswc-session-journal">Affective Graphs: The Visual Appeal of Linked Data</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -196,11 +236,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Multilinguality</h4>
-            <ul>
-              <li>YAGO: a multilingual knowledge base from Wikipedia, Wordnet, and Geonames</li>
-              <li>Translating Ontologies in a Real-World Setting with ESSOT</li>
-              <li>Zhishi.lemon：On Publishing Zhishi.me as Linguistic Linked Open Data</li>
-              <li>Domain Adaptation for Ontology Localization</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-resource">YAGO: a multilingual knowledge base from Wikipedia, Wordnet, and Geonames</li>
+              <li class="iswc-session-application">Translating Ontologies in a Real-World Setting with ESSOT</li>
+              <li class="iswc-session-resource">Zhishi.lemon：On Publishing Zhishi.me as Linguistic Linked Open Data</li>
+              <li class="iswc-session-journal">Domain Adaptation for Ontology Localization</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -208,11 +248,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Querying</h4>
-            <ul>
-              <li>The multiset semantics of SPARQL patterns</li>
-              <li>Containment of Expressive SPARQL Navigational Queries</li>
-              <li>Optimizing Aggregate SPARQL Queries using Materialized RDF Views</li>
-              <li>Context-Free Path Queries on RDF Graphs</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">The multiset semantics of SPARQL patterns</li>
+              <li class="iswc-session-research">Containment of Expressive SPARQL Navigational Queries</li>
+              <li class="iswc-session-research">Optimizing Aggregate SPARQL Queries using Materialized RDF Views</li>
+              <li class="iswc-session-research">Context-Free Path Queries on RDF Graphs</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -220,11 +260,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Smart Planet</h4>
-            <ul>
-              <li>Predicting Energy Consumption of Ontology Reasoning over Mobile Devices</li>
-              <li>Building Urban LOD for Solving Illegally Parked Bicycles in Tokyo</li>
-              <li>EnergyUse - A Collaborative Semantic Platform for Monitoring and Discussing Energy Consumption</li>
-              <li>Interoperability for Smart Appliances in the IoT World</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Predicting Energy Consumption of Ontology Reasoning over Mobile Devices</li>
+              <li class="iswc-session-application">Building Urban LOD for Solving Illegally Parked Bicycles in Tokyo</li>
+              <li class="iswc-session-application">EnergyUse - A Collaborative Semantic Platform for Monitoring and Discussing Energy Consumption</li>
+              <li class="iswc-session-resource">Interoperability for Smart Appliances in the IoT World</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -311,11 +351,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Querying/SPARQL (I)</h4>
-            <ul>
-              <li>Extending SPARQL for data analytic tasks</li>
-              <li>SPARQLGX: A Distributed RDF Store Mapping SPARQL to Spark</li>
-              <li>Querying Wikidata: Comparing SPARQL, Relational and Graph Databases</li>
-              <li>A Fine-Grained Evaluation of SPARQL Endpoint Federation Systems</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-application">Extending SPARQL for data analytic tasks</li>
+              <li class="iswc-session-resource">SPARQLGX: A Distributed RDF Store Mapping SPARQL to Spark</li>
+              <li class="iswc-session-resource">Querying Wikidata: Comparing SPARQL, Relational and Graph Databases</li>
+              <li class="iswc-session-journal">A Fine-Grained Evaluation of SPARQL Endpoint Federation Systems</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -323,11 +363,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Ontology Matching</h4>
-            <ul>
-              <li>Algebraic calculi for weighted ontology alignments</li>
-              <li>An Extensible Linear Approach For Holistic Ontology Matching</li>
-              <li>User validation in ontology alignment</li>
-              <li>Unsupervised Entity Resolution on Multi-type Graphs</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Algebraic calculi for weighted ontology alignments</li>
+              <li class="iswc-session-research">An Extensible Linear Approach For Holistic Ontology Matching</li>
+              <li class="iswc-session-research">User validation in ontology alignment</li>
+              <li class="iswc-session-research">Unsupervised Entity Resolution on Multi-type Graphs</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -335,11 +375,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Linked Data</h4>
-            <ul>
-              <li>Conference Linked Data: the ScholarlyData project</li>
-              <li>FOOD: FOod in Open Data</li>
-              <li>Multi-purpose Linked Data Generator</li>
-              <li>Clinga: Bringing Chinese Physical and Human Geography in Linked Open Data</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-resource">Conference Linked Data: the ScholarlyData project</li>
+              <li class="iswc-session-resource">FOOD: FOod in Open Data</li>
+              <li class="iswc-session-resource">Multi-purpose Linked Data Generator</li>
+              <li class="iswc-session-resource">Clinga: Bringing Chinese Physical and Human Geography in Linked Open Data</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -368,11 +408,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Streams</h4>
-            <ul>
-              <li>Planning Ahead: Stream-Driven Linked-Data Access under Update-Budget Constraints</li>
-              <li>SPARQL-to-SQL on Internet of Things Databases and Streams</li>
-              <li>Operator-aware approach for boosting performance in RDF stream processing</li>
-              <li>TripleWave: Spreading RDF Streams on the Web</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Planning Ahead: Stream-Driven Linked-Data Access under Update-Budget Constraints</li>
+              <li class="iswc-session-research">SPARQL-to-SQL on Internet of Things Databases and Streams</li>
+              <li class="iswc-session-journal">Operator-aware approach for boosting performance in RDF stream processing</li>
+              <li class="iswc-session-resource">TripleWave: Spreading RDF Streams on the Web</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -380,11 +420,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Search (I)</h4>
-            <ul>
-              <li>Explicit Query Interpretation and Diversification for Context-driven Concept Search across Ontologies</li>
-              <li>Structuring Linked Data Search Results Using Probabilistic Soft Logic</li>
-              <li>A Knowledge Base Approach to Cross-lingual Keyword Query Interpretation</li>
-              <li>A Probabilistic Model for Time-Aware Entity Recommendation</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Explicit Query Interpretation and Diversification for Context-driven Concept Search across Ontologies</li>
+              <li class="iswc-session-research">Structuring Linked Data Search Results Using Probabilistic Soft Logic</li>
+              <li class="iswc-session-research">A Knowledge Base Approach to Cross-lingual Keyword Query Interpretation</li>
+              <li class="iswc-session-research">A Probabilistic Model for Time-Aware Entity Recommendation</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -392,11 +432,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Linked Data Measurement</h4>
-            <ul>
-              <li>Are Names Meaningful? Quantifying Social Meaning on the Semantic Web</li>
-              <li>Learning to Assess Linked Data Relationships Using Genetic Programming</li>
-              <li>LODStats: The Data Web Census Dataset</li>
-              <li>Quality Assessment for Linked Data: A Survey</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Are Names Meaningful? Quantifying Social Meaning on the Semantic Web</li>
+              <li class="iswc-session-research">Learning to Assess Linked Data Relationships Using Genetic Programming</li>
+              <li class="iswc-session-resource">LODStats: The Data Web Census Dataset</li>
+              <li class="iswc-session-journal">Quality Assessment for Linked Data: A Survey</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -425,11 +465,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Ontologies (I)</h4>
-            <ul>
-              <li>Linked Open Vocabularies (LOV): a gateway to reusable semantic vocabularies on the Web</li>
-              <li>Capturing Industrial Information Models with Ontologies and Constraints</li>
-              <li>Towards Analytics Aware Ontology Based Access to Static and Streaming Data</li>
-              <li>Ontology-Based Design of Space Systems</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-journal">Linked Open Vocabularies (LOV): a gateway to reusable semantic vocabularies on the Web</li>
+              <li class="iswc-session-application">Capturing Industrial Information Models with Ontologies and Constraints</li>
+              <li class="iswc-session-application">Towards Analytics Aware Ontology Based Access to Static and Streaming Data</li>
+              <li class="iswc-session-application">Ontology-Based Design of Space Systems</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -437,10 +477,10 @@ status:   published
         <tr class="">
           <td>
             <h4>Embeddings & Neural Approaches</h4>
-            <ul>
-              <li>WebBrain: Joint Neural Learning of Large-Scale Commonsense Knowledge</li>
-              <li>A Collection of Benchmark Datasets for Systematic Evaluations of Machine Learning on the Semantic Web</li>
-              <li>Semantic Sensitive Simultaneous Tensor Factorization</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">WebBrain: Joint Neural Learning of Large-Scale Commonsense Knowledge</li>
+              <li class="iswc-session-resource">A Collection of Benchmark Datasets for Systematic Evaluations of Machine Learning on the Semantic Web</li>
+              <li class="iswc-session-research">Semantic Sensitive Simultaneous Tensor Factorization</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -448,11 +488,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Search (II)</h4>
-            <ul>
-              <li>CubeQA—Question Answering on RDF Data Cubes</li>
-              <li>Faceted search over RDF-based knowledge graphs</li>
-              <li>Aemoo: Linked Data exploration based on Knowledge Patterns</li>
-              <li>Walking without a Map: Ranking-Based Traversal for Querying Linked Data</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">CubeQA—Question Answering on RDF Data Cubes</li>
+              <li class="iswc-session-journal">Faceted search over RDF-based knowledge graphs</li>
+              <li class="iswc-session-journal">Aemoo: Linked Data exploration based on Knowledge Patterns</li>
+              <li class="iswc-session-research">Walking without a Map: Ranking-Based Traversal for Querying Linked Data</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -531,10 +571,10 @@ status:   published
           <td>
             <h4>Lightning Talks</h4>
             <ul class="hidden">
-              <li>PAPER</li>
-              <li>PAPER</li>
-              <li>PAPER</li>
-              <li>PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -542,11 +582,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Data Mining</h4>
-            <ul>
-              <li>Efficient Algorithms for Association Finding and Frequent Association Pattern Mining</li>
-              <li>RDF2Vec: RDF Graph Embeddings for Data Mining</li>
-              <li>Automatic Classification of Springer Nature Proceedings with Smart Topic Miner</li>
-              <li>Exception-enriched Rule Learning from Knowledge Graphs</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Efficient Algorithms for Association Finding and Frequent Association Pattern Mining</li>
+              <li class="iswc-session-research">RDF2Vec: RDF Graph Embeddings for Data Mining</li>
+              <li class="iswc-session-application">Automatic Classification of Springer Nature Proceedings with Smart Topic Miner</li>
+              <li class="iswc-session-research">Exception-enriched Rule Learning from Knowledge Graphs</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -554,11 +594,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Natural Language Processing</h4>
-            <ul>
-              <li>Linking Lexical Resources to Disambiguated Distributional Semantic Networks</li>
-              <li>Abstract Meaning Representations as Linked Data</li>
-              <li>A Large Scale Replication Study of the Top Systems performing in SemEval Twitter Sentiment Analysis</li>
-              <li>Building event-centric knowledge graphs from news</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-resource">Linking Lexical Resources to Disambiguated Distributional Semantic Networks</li>
+              <li class="iswc-session-resource">Abstract Meaning Representations as Linked Data</li>
+              <li class="iswc-session-resource">A Large Scale Replication Study of the Top Systems performing in SemEval Twitter Sentiment Analysis</li>
+              <li class="iswc-session-journal">Building event-centric knowledge graphs from news</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -586,11 +626,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Medical Applications</h4>
-            <ul>
-              <li>Integrating medical scientific knowledge with the semantically Quantified Self</li>
-              <li>A Reuse-based Annotation Approach for Medical Documents</li>
-              <li>QuerioDALI: Question Answering over Dynamic and Linked Knowledge Graphs</li>
-              <li>Semantic Technologies for Data Analysis in Health Care</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Integrating medical scientific knowledge with the semantically Quantified Self</li>
+              <li class="iswc-session-research">A Reuse-based Annotation Approach for Medical Documents</li>
+              <li class="iswc-session-application">QuerioDALI: Question Answering over Dynamic and Linked Knowledge Graphs</li>
+              <li class="iswc-session-application">Semantic Technologies for Data Analysis in Health Care</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -598,11 +638,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Querying/SPARQL (II)</h4>
-            <ul>
-              <li>Distributed RDF Query Answering with Dynamic Data Exchange</li>
-              <li>Ontop of Geospatial Databases</li>
-              <li>Exploiting Emergent Schemas to make RDF systems more efficient</li>
-              <li>Ontop: Answering SPARQL queries over relational databases</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Distributed RDF Query Answering with Dynamic Data Exchange</li>
+              <li class="iswc-session-research">Ontop of Geospatial Databases</li>
+              <li class="iswc-session-research">Exploiting Emergent Schemas to make RDF systems more efficient</li>
+              <li class="iswc-session-journal">Ontop: Answering SPARQL queries over relational databases</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -610,11 +650,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Ontologies (II)</h4>
-            <ul>
-              <li>Enabling combined software and data engineering at Web-scale: The ALIGNED suite of ontologies</li>
-              <li>An Ontology of Soil Properties and Processes</li>
-              <li>Ontological representation of audio features</li>
-              <li>AUFX-O: Novel Methods for the Representation of Audio Processing Workflows</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-resource">Enabling combined software and data engineering at Web-scale: The ALIGNED suite of ontologies</li>
+              <li class="iswc-session-resource">An Ontology of Soil Properties and Processes</li>
+              <li class="iswc-session-resource">Ontological representation of audio features</li>
+              <li class="iswc-session-resource">AUFX-O: Novel Methods for the Representation of Audio Processing Workflows</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
@@ -643,10 +683,10 @@ status:   published
           <td>
             <h4>Special event session</h4>
             <ul class="hidden">
-              <li>PAPER</li>
-              <li>PAPER</li>
-              <li>PAPER</li>
-              <li>PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
+              <li class="iswc-session-SSSS">PAPER</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 501</td>
@@ -654,11 +694,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Enriching Data Sources</h4>
-            <ul>
-              <li>Multi-level semantic labelling of numerical values</li>
-              <li>Leveraging Linked Data to Discover Semantic Relations within Data Sources</li>
-              <li>Semantic labeling: A domain-independent approach</li>
-              <li>Extracting Semantic Information for e-Commerce</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Multi-level semantic labelling of numerical values</li>
+              <li class="iswc-session-research">Leveraging Linked Data to Discover Semantic Relations within Data Sources</li>
+              <li class="iswc-session-research">Semantic labeling: A domain-independent approach</li>
+              <li class="iswc-session-application">Extracting Semantic Information for e-Commerce</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 502</td>
@@ -666,11 +706,11 @@ status:   published
         <tr class="">
           <td>
             <h4>Reasoning</h4>
-            <ul>
-              <li>Practical Acyclicity Notions for Query Answering Horn-SRIQ Ontologies</li>
-              <li>Updating DL-Lite Ontologies through First-Order Queries</li>
-              <li>The OWL Reasoner Evaluation (ORE) 2015 Resources</li>
-              <li>OntoBench: Generating Custom OWL 2 Benchmark Ontologies</li>
+            <ul class="iswc-session-list">
+              <li class="iswc-session-research">Practical Acyclicity Notions for Query Answering Horn-SRIQ Ontologies</li>
+              <li class="iswc-session-research">Updating DL-Lite Ontologies through First-Order Queries</li>
+              <li class="iswc-session-resource">The OWL Reasoner Evaluation (ORE) 2015 Resources</li>
+              <li class="iswc-session-resource">OntoBench: Generating Custom OWL 2 Benchmark Ontologies</li>
             </ul>
           </td>
           <td class="iswc-parallel-room">Room 504+505</td>
