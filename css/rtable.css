@@ -1,18 +1,16 @@
 table.rtable {
   margin: 0 auto;
   border-collapse: collapse;
-  font-weight: 100;
-  background: #333; color: #fff;
   text-rendering: optimizeLegibility;
 }
 
 table.rtable thead th { font-weight: 600; }
-table.rtable thead th, table.rtable tbody td {
+table.rtable thead th, table.rtable tbody td {:not(.classy)
   padding: .8rem; font-size: 1.4rem;
 }
 table.rtable tbody td {
   padding: .8rem; font-size: 1.4rem;
-  color: #444; background: #eee;
+  /*color: #444; background: #eee;*/
 }
 table.rtable tbody tr:not(:last-child) {
   border-top: 1px solid #ddd;
@@ -25,13 +23,18 @@ table.rtable tbody tr:not(:last-child) {
   table.rtable tbody td {
     display: block; padding: .6rem;
   }
-  table.rtable tbody tr td:first-child {
-    background: #666; color: #fff;
+  table.rtable tbody tr td:first-child:not(.no-flip){
+    /*background: #666; color: #fff;*/
+
   }
 	table.rtable tbody td:before {
     content: attr(data-th + ':');
     font-weight: bold;
     display: inline-block;
+  }
+
+  table.rtable tbody tr td:first-child:not(.no-flip) {
+    /*background: #666; color: #fff;*/
   }
 }
 
