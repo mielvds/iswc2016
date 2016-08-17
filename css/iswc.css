@@ -141,7 +141,7 @@ span.iswc-right-emph-date{
 
 ul.iswc-right-emph-date li{
 	margin-top: 10px;
-	
+
 }
 
 /* PC Chair */
@@ -332,7 +332,7 @@ div.panel .table tr td:first-child{
 
 /* for ADS at bottom */
 section.iswc-ads div.iswc-ads-items,
-section.iswc-ads h4, 
+section.iswc-ads h4,
 section.iswc-ads hr{
    clear: left;
 }
@@ -360,6 +360,10 @@ footer{
   	/* background: -moz-linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* For Firefox 3.6 to 15 */
 	/* background: linear-gradient(#ddd,#eee,#fff,#fff,#fff); /* Standard syntax */
 	background-color: #fafafa;
+}
+
+.program-panel {
+    padding: 0;
 }
 
 /* for small screen */
@@ -406,7 +410,7 @@ footer{
 		border-top: 1px solid #444 !important;
 	}
 	/*
-	html, 
+	html,
 	body {
 	    width: 1200px !important;
 	}
@@ -426,4 +430,3 @@ footer{
 
 
 }
-

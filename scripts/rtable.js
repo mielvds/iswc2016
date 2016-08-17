@@ -1,14 +1,23 @@
-var headertext = [],
-headers = document.querySelectorAll("#miyazaki th"),
-tablerows = document.querySelectorAll("#miyazaki th"),
-tablebody = document.querySelector("#miyazaki tbody");
+$(function() {
 
-for(var i = 0; i < headers.length; i++) {
-  var current = headers[i];
-  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
-}
-for (var i = 0, row; row = tablebody.rows[i]; i++) {
-  for (var j = 0, col; col = row.cells[j]; j++) {
-    col.setAttribute("data-th", headertext[j]);
-  }
-}
+  $(".rtable").each(function () {
+    var headertext = [],
+    $headers = $(this).find("thead th"),
+    $tablerows = $(this).children("th"),
+    $tablebody = $(this).children("tbody");
+
+    $headers.each(function () {
+      headertext.push($(this).text().replace(/\r?\n|\r/,""));
+    });
+
+    $tablebody.each(function (i, tablebody) {
+      for (var i = 0, row; row = tablebody.rows[i]; i++) {
+        for (var j = 0, col; col = row.cells[j]; j++) {
+          if (j > 0)
+            $(col).attr("data-th", headertext[j]);
+        }
+      }
+    });
+
+  });
+});
