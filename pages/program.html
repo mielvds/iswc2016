@@ -1,6 +1,6 @@
 ---
-title: "Program"
-updated:   2016-03-17 00:00:00
+title: "Program (for Review)"
+updated:   2016-08-17 00:00:00
 layout: default
 group: program
 menu: main
@@ -9,14 +9,14 @@ status: published
 <h1>{{ page.title }}</h1>
 
 <style>
-	div.panel-heading h3{
-		position: relative;
-	}
+  div.panel-heading h3{
+    position: relative;
+  }
 
-	span.day{
-		position: absolute;
-		left:10px;
-	}
+  span.day{
+    position: absolute;
+    left:10px;
+  }
 
   div.panel .table tr td:first-child{
     padding-left:7px;
@@ -32,16 +32,24 @@ status: published
     padding-left:7px;
     width:25%;
   }
+
+  .table > tbody > tr > td.iswc-parallel-room{
+    padding-top:17px;
+  }
+
+  .table > tbody > tr > td.iswc-parallel-time{
+    padding-top:17px;
+  }
 </style>
 
 <!-- ################################################## -->
 
 
-<div class="alert alert-warning alert-dismissible fade in" role="alert"> 
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		<span aria-hidden="true">×</span>
-	</button> 
-	Note: Here is the tentative schedule of ISWC2016.
+<div class="hidden alert alert-warning alert-dismissible fade in" role="alert"> 
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button> 
+  Note: Here is the tentative schedule of ISWC2016.
  </div>
 <br/>
 
@@ -54,8 +62,8 @@ status: published
   </div>
   <div class="panel-body">
     <p class="allign-center">
-    	Workshops <br/>
-    	Tutorials
+      Workshops <br/>
+      Tutorials
     </p>
   </div>
 </div>
@@ -69,9 +77,9 @@ status: published
   </div>
   <div class="panel-body">
     <p class="allign-center">
-    	Workshops <br/>
-    	Tutorials <br/>
-    	Doctoral Consortium
+      Workshops <br/>
+      Tutorials <br/>
+      Doctoral Consortium
     </p>
   </div>
 </div>
@@ -89,82 +97,167 @@ status: published
       <thead>
         <th>Time</th>
         <th>Session</th>
-        <th class="hidden">Room</th>
+        <th class="">Place</th>
       </thead>
       <tbody>
 
-        <tr class="TEMPORARY">
-          <td>09:00 - 17:30</td>
-          <td>
-            Opening Ceremony <br/>
-            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-mckeown.html">Kathleen McKeown</a><br/>
-            Parallel Sessions
-          </td>
-          <td class="hidden"></td>
-        </tr>
 
-
-        <tr class="TEMPORARY">
-          <td>18:00 - 21:00</td>
-          <td>
-            Poster and Demo/Reception
-          </td>
-          <td class="hidden"></td>
-        </tr>
-
-
-        <tr class="hidden">
+        <tr class="">
           <td>09:00 - 09:30</td>
-          <td>Opening Ceremony</td>
-          <td>Main Hall</td>
+          <td>
+            Opening Ceremony
+          </td>
+          <td class="">Main Hall</td>
         </tr>
 
-        <tr class="hidden">
+        <!-- -------------------------------------- -->
+
+        <tr class="">
           <td>09:30 - 10:30</td>
-          <td>Keynote: <a href="{{site.baseurl}}/pages/program/keynote-mckeown.html">Kathleen McKeown</a></td>
-          <td>Main Hall</td>
+          <td>
+            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-mckeown.html">Kathleen McKeown</a>
+          </td>
+          <td class="">Main Hall</td>
         </tr>
 
-        <tr class="hidden">
+        <!-- -------------------------------------- -->
+
+        <tr class="">
           <td>10:30 - 11:00</td>
-          <td>Coffee Break</td>
-          <td></td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
         </tr>
 
-        <tr class="hidden">
-          <td>11:00 - 12:30</td>
-          <td>Parallel Session 1</td>
-          <td></td>
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>11:00 - 12:20</td>
+          <td>
+            <h4>Parallel Session 1</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Knowledge Graphs</h4>
+            <ul>
+              <li>VoldemortKG: Mapping Schema.org Entities to Linked Open Data</li>
+              <li>Building and Exploring an Enterprise Knowledge Graph for Investment Analysis</li>
+              <li>DeFacto - Temporal and multilingual Deep Fact Validation</li>
+              <li>Linked Data (in resourceless) Platforms: a mapping for Constrained Application Protocol</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Knowledge Presentation</h4>
+            <ul>
+              <li>Knowledge Representation on the Web revisited: the Case for Prototypes</li>
+              <li>Ontologies for Knowledge Graphs: Breaking the Rules</li>
+              <li>Can you imagine... a language for combinatorial creativity?</li>
+              <li>Expressive Multi-Level Modeling for the Semantic Web</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Interaction</h4>
+            <ul>
+              <li>Seed, an End-user Text Composition Tool for the Semantic Web</li>
+              <li>Benchmarking End-User Structured Data Search and Exploration</li>
+              <li>Visual query interfaces for semantic datasets: an evaluation study</li>
+              <li>Affective Graphs: The Visual Appeal of Linked Data</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
         </tr>
 
-        <tr class="hidden">
-          <td>12:30 - 14:00</td>
-          <td>Lunch</td>
-          <td>Ariston Hotel</td>
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>12:20 - 14:00</td>
+          <td>
+            Lunch
+          </td>
+          <td class="">Ariston Hotel</td>
         </tr>
 
-        <tr class="hidden">
-          <td>14:00 - 15:30</td>
-          <td>Parallel Session 2</td>
-          <td></td>
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>14:00 - 15:20</td>
+          <td>
+            <h4>Parallel Session 2</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Multilinguality</h4>
+            <ul>
+              <li>YAGO: a multilingual knowledge base from Wikipedia, Wordnet, and Geonames</li>
+              <li>Translating Ontologies in a Real-World Setting with ESSOT</li>
+              <li>Zhishi.lemon：On Publishing Zhishi.me as Linguistic Linked Open Data</li>
+              <li>Domain Adaptation for Ontology Localization</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Querying</h4>
+            <ul>
+              <li>The multiset semantics of SPARQL patterns</li>
+              <li>Containment of Expressive SPARQL Navigational Queries</li>
+              <li>Optimizing Aggregate SPARQL Queries using Materialized RDF Views</li>
+              <li>Context-Free Path Queries on RDF Graphs</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Smart Planet</h4>
+            <ul>
+              <li>Predicting Energy Consumption of Ontology Reasoning over Mobile Devices</li>
+              <li>Building Urban LOD for Solving Illegally Parked Bicycles in Tokyo</li>
+              <li>EnergyUse - A Collaborative Semantic Platform for Monitoring and Discussing Energy Consumption</li>
+              <li>Interoperability for Smart Appliances in the IoT World</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
         </tr>
 
-        <tr class="hidden">
-          <td>15:30 - 16:00</td>
-          <td>Coffee Break</td>
-          <td></td>
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>15:20 - 15:50</td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
         </tr>
 
-        <tr class="hidden">
-          <td>16:00 - 17:30</td>
-          <td>Parallel Session 3</td>
-          <td></td>
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>15:50 - 17:10</td>
+          <td>
+            Minute Madness
+          </td>
+          <td class="">Main Hall</td>
         </tr>
-        
-        <tr class="hidden">
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
           <td>18:00 - 21:00</td>
-          <td>Poster and Demo Reception</td>
-          <td>3rd Floor</td>
+          <td>
+            Poster and Demo Reception
+          </td>
+          <td class="">3rd Floor</td>
         </tr>
 
       </tbody>
@@ -184,74 +277,205 @@ status: published
       <thead>
         <th>Time</th>
         <th>Session</th>
-        <th class="hidden">Room</th>
+        <th class="">Place</th>
       </thead>
       <tbody>
 
-        <tr class="TEMPORARY">
-          <td>09:00 - 17:30</td>
+        <tr class="">
+          <td>09:00 - 10:00</td>
           <td>
-            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-bizer.html">Christian Bizer</a><br/>
-            Parallel Sessions
+            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-bizer.html">Christian Bizer</a>
           </td>
-          <td class="hidden"></td>
+          <td class="">Main Hall</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>10:00 - 10:30</td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>10:30 - 11:50</td>
+          <td>
+            <h4>Parallel Session 3</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Querying/SPARQL (I)</h4>
+            <ul>
+              <li>Extending SPARQL for data analytic tasks</li>
+              <li>SPARQLGX: A Distributed RDF Store Mapping SPARQL to Spark</li>
+              <li>Querying Wikidata: Comparing SPARQL, Relational and Graph Databases</li>
+              <li>A Fine-Grained Evaluation of SPARQL Endpoint Federation Systems</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Ontology Matching</h4>
+            <ul>
+              <li>Algebraic calculi for weighted ontology alignments</li>
+              <li>An Extensible Linear Approach For Holistic Ontology Matching</li>
+              <li>User validation in ontology alignment</li>
+              <li>Unsupervised Entity Resolution on Multi-type Graphs</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Linked Data</h4>
+            <ul>
+              <li>Conference Linked Data: the ScholarlyData project</li>
+              <li>FOOD: FOod in Open Data</li>
+              <li>Multi-purpose Linked Data Generator</li>
+              <li>Clinga: Bringing Chinese Physical and Human Geography in Linked Open Data</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
         </tr>
 
 
-        <tr class="TEMPORARY">
-          <td>18:00 - 21:00</td>
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>11:50 - 13:30</td>
+          <td>
+            Lunch
+          </td>
+          <td class="">Ariston Hotel</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>13:30 - 14:50</td>
+          <td>
+            <h4>Parallel Session 4</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Streams</h4>
+            <ul>
+              <li>Planning Ahead: Stream-Driven Linked-Data Access under Update-Budget Constraints</li>
+              <li>SPARQL-to-SQL on Internet of Things Databases and Streams</li>
+              <li>Operator-aware approach for boosting performance in RDF stream processing</li>
+              <li>TripleWave: Spreading RDF Streams on the Web</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Search (I)</h4>
+            <ul>
+              <li>Explicit Query Interpretation and Diversification for Context-driven Concept Search across Ontologies</li>
+              <li>Structuring Linked Data Search Results Using Probabilistic Soft Logic</li>
+              <li>A Knowledge Base Approach to Cross-lingual Keyword Query Interpretation</li>
+              <li>A Probabilistic Model for Time-Aware Entity Recommendation</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Linked Data Measurement</h4>
+            <ul>
+              <li>Are Names Meaningful? Quantifying Social Meaning on the Semantic Web</li>
+              <li>Learning to Assess Linked Data Relationships Using Genetic Programming</li>
+              <li>LODStats: The Data Web Census Dataset</li>
+              <li>Quality Assessment for Linked Data: A Survey</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>14:50 - 15:30</td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
+        </tr>
+
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>15:30 - 16:50</td>
+          <td>
+            <h4>Parallel Session 5</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Ontologies (I)</h4>
+            <ul>
+              <li>Linked Open Vocabularies (LOV): a gateway to reusable semantic vocabularies on the Web</li>
+              <li>Capturing Industrial Information Models with Ontologies and Constraints</li>
+              <li>Towards Analytics Aware Ontology Based Access to Static and Streaming Data</li>
+              <li>Ontology-Based Design of Space Systems</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Embeddings & Neural Approaches</h4>
+            <ul>
+              <li>WebBrain: Joint Neural Learning of Large-Scale Commonsense Knowledge</li>
+              <li>A Collection of Benchmark Datasets for Systematic Evaluations of Machine Learning on the Semantic Web</li>
+              <li>Semantic Sensitive Simultaneous Tensor Factorization</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Search (II)</h4>
+            <ul>
+              <li>CubeQA—Question Answering on RDF Data Cubes</li>
+              <li>Faceted search over RDF-based knowledge graphs</li>
+              <li>Aemoo: Linked Data exploration based on Knowledge Patterns</li>
+              <li>Walking without a Map: Ranking-Based Traversal for Querying Linked Data</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>17:00 - 18:00</td>
+          <td>
+            Town Hall
+          </td>
+          <td class="">Room 501</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>18:30 21:30</td>
           <td>
             Dinner
           </td>
-          <td class="hidden"></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>09:00 - 10:00</td>
-          <td>Keynote: <a href="{{site.baseurl}}/pages/program/keynote-bizer.html">Christian Bizer</a></td>
-          <td>Main Hall</td>
-        </tr>
-
-        <tr class="hidden">
-          <td>10:00 - 10:30</td>
-          <td>Coffee Break</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>10:30 - 12:00</td>
-          <td>Parallel Session 4</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>12:00 - 13:30</td>
-          <td>Lunch</td>
-          <td>Ariston Hotel</td>
-        </tr class="hidden">
-
-        <tr class="hidden">
-          <td>13:30 - 15:00</td>
-          <td>Parallel Session 5</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>15:00 - 15:30</td>
-          <td>Coffee Break</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>15:30 - 17:00</td>
-          <td>Parallel Session 6</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>18:00 - 21:00</td>
-          <td>Dinner</td>
-          <td>Portpia Hotel</td>
+          <td class="">Portpia Hotel</td>
         </tr>
 
       </tbody>
@@ -271,67 +495,195 @@ status: published
       <thead>
         <th>Time</th>
         <th>Session</th>
-        <th class="hidden">Room</th>
+        <th class="">Place</th>
       </thead>
       <tbody>
 
 
-        <tr class="TEMPORARY">
-          <td>09:00 - 17:30</td>
+        <tr class="">
+          <td>09:00 - 10:00</td>
           <td>
-            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-kitano.html">Hiroaki Kitano</a> <br/>
-            Parallel Sessions <br/>
+            Keynote: <a href="{{site.baseurl}}/pages/program/keynote-kitano.html">Hiroaki Kitano</a>
+          </td>
+          <td class="">Main Hall</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>10:00 - 10:30</td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>10:30 - 11:50</td>
+          <td>
+            <h4>Parallel Session 6</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Lightning Talks</h4>
+            <ul class="hidden">
+              <li>PAPER</li>
+              <li>PAPER</li>
+              <li>PAPER</li>
+              <li>PAPER</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Data Mining</h4>
+            <ul>
+              <li>Efficient Algorithms for Association Finding and Frequent Association Pattern Mining</li>
+              <li>RDF2Vec: RDF Graph Embeddings for Data Mining</li>
+              <li>Automatic Classification of Springer Nature Proceedings with Smart Topic Miner</li>
+              <li>Exception-enriched Rule Learning from Knowledge Graphs</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Natural Language Processing</h4>
+            <ul>
+              <li>Linking Lexical Resources to Disambiguated Distributional Semantic Networks</li>
+              <li>Abstract Meaning Representations as Linked Data</li>
+              <li>A Large Scale Replication Study of the Top Systems performing in SemEval Twitter Sentiment Analysis</li>
+              <li>Building event-centric knowledge graphs from news</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>11:50 - 13:30</td>
+          <td>
+            Lunch
+          </td>
+          <td class="">Ariston Hotel</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>13:30 - 14:50</td>
+          <td>
+            <h4>Parallel Session 7</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Medical Applications</h4>
+            <ul>
+              <li>Integrating medical scientific knowledge with the semantically Quantified Self</li>
+              <li>A Reuse-based Annotation Approach for Medical Documents</li>
+              <li>QuerioDALI: Question Answering over Dynamic and Linked Knowledge Graphs</li>
+              <li>Semantic Technologies for Data Analysis in Health Care</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Querying/SPARQL (II)</h4>
+            <ul>
+              <li>Distributed RDF Query Answering with Dynamic Data Exchange</li>
+              <li>Ontop of Geospatial Databases</li>
+              <li>Exploiting Emergent Schemas to make RDF systems more efficient</li>
+              <li>Ontop: Answering SPARQL queries over relational databases</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Ontologies (II)</h4>
+            <ul>
+              <li>Enabling combined software and data engineering at Web-scale: The ALIGNED suite of ontologies</li>
+              <li>An Ontology of Soil Properties and Processes</li>
+              <li>Ontological representation of audio features</li>
+              <li>AUFX-O: Novel Methods for the Representation of Audio Processing Workflows</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>14:50 - 15:30</td>
+          <td>
+            Coffee Break
+          </td>
+          <td class=""></td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td class="iswc-parallel-time" rowspan=4>15:30 - 16:50</td>
+          <td>
+            <h4>Parallel Session 8</h4>
+          </td>
+          <td class=""></td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Special event session</h4>
+            <ul class="hidden">
+              <li>PAPER</li>
+              <li>PAPER</li>
+              <li>PAPER</li>
+              <li>PAPER</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 501</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Enriching Data Sources</h4>
+            <ul>
+              <li>Multi-level semantic labelling of numerical values</li>
+              <li>Leveraging Linked Data to Discover Semantic Relations within Data Sources</li>
+              <li>Semantic labeling: A domain-independent approach</li>
+              <li>Extracting Semantic Information for e-Commerce</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 502</td>
+        </tr>
+        <tr class="">
+          <td>
+            <h4>Reasoning</h4>
+            <ul>
+              <li>Practical Acyclicity Notions for Query Answering Horn-SRIQ Ontologies</li>
+              <li>Updating DL-Lite Ontologies through First-Order Queries</li>
+              <li>The OWL Reasoner Evaluation (ORE) 2015 Resources</li>
+              <li>OntoBench: Generating Custom OWL 2 Benchmark Ontologies</li>
+            </ul>
+          </td>
+          <td class="iswc-parallel-room">Room 504+505</td>
+        </tr>
+
+        <!-- -------------------------------------- -->
+
+        <tr class="">
+          <td>17:00 - 17:30</td>
+          <td>
             Closing
           </td>
-          <td class="hidden"></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>09:00 - 10:00</td>
-          <td>Keynote: <a href="{{site.baseurl}}/pages/program/keynote-kitano.html">Hiroaki Kitano</a> </td>
-          <td>Main Hall</td>
-        </tr>
-
-        <tr class="hidden">
-          <td>10:00 - 10:30</td>
-          <td>Coffee Break</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>10:30 - 12:00</td>
-          <td>Parallel Session 7</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>12:00 - 13:30</td>
-          <td>Lunch</td>
-          <td>Ariston Hotel</td>
-        </tr>
-
-        <tr class="hidden">
-          <td>13:30 - 15:00</td>
-          <td>Parallel Session 8</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>15:00 - 15:30</td>
-          <td>Coffee Break</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>15:30 - 17:00</td>
-          <td>Parallel Session 9</td>
-          <td></td>
-        </tr>
-
-        <tr class="hidden">
-          <td>17:00 - 17:30</td>
-          <td>Closing</td>
-          <td>Main Hall</td>
+          <td class="">Main Hall</td>
         </tr>
 
       </tbody>
