@@ -5,7 +5,7 @@ layout: default
 group: program
 menu: sub
 ordered: 2
-status: published
+status: draft
 ---
 
 <h1 id="iswc-page-title">{{ page.title }}</h1>
@@ -80,29 +80,6 @@ status: published
 	    }, 800);
 	}
 </script>
-<!--
-<section id="filter-panel" class="allign-right">
-	<form class="form-inline">
-	  	<div class="form-group">
-		    <div class="col-sm-5">
-		      	<input type="text" class="form-control" id="filterTr" onkeyup="filterText(this);" placeholder="Filter" />
-		    </div>
-	 	</div>
-	</form>
-</section>
-
-<hr/>
-
-
-<div class="alert alert-warning alert-dismissible fade in" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		<span aria-hidden="true">×</span>
-	</button>
-	Note: This page has NOT been annouced yet.
- </div>
-<br/>
-
--->
 
 <ul id="top-menu">
 	<li><a href="#" onclick="scrollToId('iswc-research')">Research Track</a></li>
@@ -118,23 +95,8 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-<table class="table iswc-paper">
-	{% for paper in site.data.researchtrack %}
-		<tr>
-			<td>
-				<div class='iswc-paper-title'>
-					{{ paper.title }}
-				</div>
-				<div class='iswc-paper-authors'>
-					{{ paper.authors }}
-				</div>
-			</td>
-		</tr>
-	{% endfor %}
-
-	<tr class="iswc-last-row"><td></td></tr>
-
-</table>
+{% assign iswc_papers = (site.data.papers | where: "Track", "research" | sort: "Lastname")) %}
+{% include table-papers.html %}
 
 <hr/>
 
@@ -144,26 +106,8 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-
-<table class="table iswc-paper">
-
-	{% for paper in site.data.resourcestrack %}
-		<tr>
-			<td>
-				<div class='iswc-paper-title'>
-					{{ paper.title }}
-				</div>
-				<div class='iswc-paper-authors'>
-					{{ paper.authors }}
-				</div>
-			</td>
-		</tr>
-	{% endfor %}
-
-
-	<tr class="iswc-last-row"><td></td></tr>
-
-</table>
+{% assign iswc_papers = (site.data.papers | where: "Track", "resources" | sort: "Lastname")) %}
+{% include table-papers.html %}
 
 <hr/>
 
@@ -175,25 +119,8 @@ status: published
 </div>
 
 
-<table class="table iswc-paper">
-
-	{% for paper in site.data.applicationstrack %}
-		<tr>
-			<td>
-				<div class='iswc-paper-title'>
-					{{ paper.title }}
-				</div>
-				<div class='iswc-paper-authors'>
-					{{ paper.authors }}
-				</div>
-			</td>
-		</tr>
-	{% endfor %}
-
-
-	<tr class="iswc-last-row"><td></td></tr>
-
-</table>
+{% assign iswc_papers = (site.data.papers | where: "Track", "application" | sort: "Lastname")) %}
+{% include table-papers.html %}
 
 <hr/>
 
@@ -204,24 +131,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-<table class="table iswc-paper">
-
-	{% for paper in site.data.journaltrack %}
-		<tr>
-			<td>
-				<div class='iswc-paper-title'>
-					{{ paper.title }}
-				</div>
-				<div class='iswc-paper-authors'>
-					{{ paper.authors }}
-				</div>
-			</td>
-		</tr>
-	{% endfor %}
-
-
-	<tr class="iswc-last-row"><td></td></tr>
-
-</table>
+{% assign iswc_papers = (site.data.papers | where: "Track", "journal" | sort: "Lastname")) %}
+{% include table-papers.html %}
 
 <hr/>
