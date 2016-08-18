@@ -203,6 +203,10 @@ table.iswc-paper .iswc-paper-title{
 	font-weight: bold;
 }
 
+table.iswc-paper .iswc-paper-title a{
+	color:#000;
+}
+
 table.iswc-paper .iswc-paper-authors{
 	margin-top: 10px;
 	margin-bottom: 7px;
