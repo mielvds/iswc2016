@@ -2,14 +2,14 @@
 {% assign iswc_presentations = (site.data.papers | where: "Session", iswc_session_name | sort: "PIndex")) %}
 
 <tr class="iswc-session-head">
- 	<td>
+ 	<td class="no-flip">
  		<h4>{{ iswc_session_name }}</h4>
   	</td>
-  	<td class="iswc-parallel-room">{{ iswc_session_room }}</td>
+  	<td class="iswc-parallel-room no-flip">{{ iswc_session_room }}</td>
 </tr>
 
 <tr class="iswc-session-items">
- 	<td colspan=2>
+ 	<td colspan=2 class="no-flip">
     	<ul class="iswc-session-list">
     		{% for pres in iswc_presentations %}
     			<li class="iswc-session-{{ pres.Track }}" title="{{ pres.Track }}">
