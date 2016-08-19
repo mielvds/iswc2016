@@ -3,8 +3,8 @@
 	{% for paper in iswc_papers %}
 		<tr>
 			<td>
-				<div class='iswc-paper-title'>
-					{{ paper.Title }}
+				<div class='iswc-paper-title' id='{{ paper.ID }}'>
+						<a href='/files/{{ paper.file }}'>{{ paper.Title }}</a>
 				</div>
 				<div class='iswc-paper-authors'>
 					{{ paper.Authors }}
