@@ -380,6 +380,26 @@ footer{
   vertical-align: middle;
 }
 
+.iswc-session-research:before{
+  color: #00661a;
+  content: "[R]";
+}
+
+.iswc-session-resource:before{
+  color: #0086b3;
+  content: "[S]";
+}
+
+.iswc-session-application:before{
+  color: #b32d00;
+  content: "[A]";
+}
+
+.iswc-session-journal:before{
+  color: #b38600;
+  content: "[J]";
+}
+
 /* for small screen */
 @media screen and (max-width: 600px){
 	.iswc-wrapper-left,
