@@ -9,6 +9,14 @@
 				<div class='iswc-paper-authors'>
 					{{ paper.Authors }}
 				</div>
+				<div>
+					{% if paper.Start != null %}{{ paper.Start | date: "%A, %B %-d, %Y" }}{% endif %} | {{ paper.Room }}
+				</div>
+			</td>
+			<td>
+				<button type="button" class="btn btn-default" aria-label="Left Align">
+					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+				</button>
 			</td>
 		</tr>
 	{% endfor %}
