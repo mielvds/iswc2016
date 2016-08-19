@@ -10,13 +10,21 @@
 					{{ paper.Authors }}
 				</div>
 				<div>
-					{% if paper.Start != null %}{{ paper.Start | date: "%A, %B %-d, %Y" }}{% endif %} | {{ paper.Room }}
+					{% if paper.Start != null %}{{ paper.Start | date: "%A, %B %-d, %Y" }}{% endif %} | {{ paper.Room }} |
+					<a role="button" data-toggle="collapse" href="#{{ paper.ID }}-abstract" aria-expanded="false" aria-controls="{{ paper.ID }}-abstract">
+									  Show abstract
+					</a>
+				</div>
+				<div class="collapse" id="{{ paper.ID }}-abstract">
+				  <div class="well">
+				    {{ paper.Abstract }}
+				  </div>
 				</div>
 			</td>
 			<td>
-				<button type="button" class="btn btn-default" aria-label="Left Align">
-					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
-				</button>
+				<a href="#" class="iswc-bookmark">
+					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				</a>
 			</td>
 		</tr>
 	{% endfor %}

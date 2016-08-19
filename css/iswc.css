@@ -371,6 +371,15 @@ footer{
   margin-bottom: 10px;
 }
 
+.iswc-offline-img {
+  width: 25%;
+  height: 25%;
+}
+
+.iswc-bookmark {
+  vertical-align: middle;
+}
+
 /* for small screen */
 @media screen and (max-width: 600px){
 	.iswc-wrapper-left,

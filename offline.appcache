@@ -26,3 +26,6 @@ NETWORK:
 *
 http://*
 https://*
+
+FALLBACK:
+/ /pages/offline.html
