@@ -149,7 +149,7 @@
   }
 
   function filterAllBookmarks(bookmarks) {
-    $('.iswc-paper').hide();
+    $('.iswc-paper, .iswc-session-resource').hide();
 
     bookmarks.forEach(function(bookmark) {
       $('#' + bookmark._id).show();
@@ -157,7 +157,7 @@
   }
 
   function showAll() {
-    $('.iswc-paper').show();
+    $('.iswc-paper, .iswc-session-resource').show();
   }
 
 }());

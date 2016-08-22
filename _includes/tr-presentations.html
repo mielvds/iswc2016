@@ -12,7 +12,7 @@
  	<td colspan=2 class="no-flip">
     	<ul class="iswc-session-list">
     		{% for pres in iswc_presentations %}
-    			<li class="iswc-session-{{ pres.Track }}" title="{{ pres.Track }}">
+    			<li class="iswc-session-{{ pres.Track }}" title="{{ pres.Track }}" id="{{pres.ID}}">
     				<div class='iswc-paper-title'>
 						<a href="/pages/program/accepted-papers.html#{{pres.ID}}">{{ pres.Title }}</a>
 					</div>

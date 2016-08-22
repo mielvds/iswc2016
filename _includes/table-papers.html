@@ -25,6 +25,11 @@
 				<a href="#" class="iswc-bookmark">
 					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 				</a>
+				{% if site.voting and paper.Track == 'poster' or paper.Track == 'demo' %}
+				<a href="#" class="iswc-voting">
+					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+				</a>
+				{% endif %}
 			</td>
 		</tr>
 	{% endfor %}
