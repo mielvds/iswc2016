@@ -21,16 +21,20 @@
 				</div>
 				<div class="text-right">
 					{% if paper.Start != null %}<a href="{{ site.baseurl }}/pages/program.html#{{ paper.Start | date: "%A" | downcase }}">{{ paper.Start | date: "%a, %b %e @ %R" }}</a>{% endif %} | {{ paper.Room }} |
+				{% if paper.Abstract != null %}
 				<a class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline" role="button" data-toggle="collapse" href="#{{ paper.ID }}-abstract" aria-expanded="false" aria-controls="{{ paper.ID }}-abstract">
 								<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>	Abstract
 
 				</a>
+				{% endif %}
 				</div>
+				{% if paper.Abstract != null %}
 				<div class="collapse" id="{{ paper.ID }}-abstract">
 				  <div class="well">
 				    {{ paper.Abstract }}
 				  </div>
 				</div>
+				{% endif %}
 			</td>
 		</tr>
 	{% endfor %}
