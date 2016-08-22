@@ -210,6 +210,19 @@ table.iswc-papers .iswc-paper-authors{
 	color: #888;
 }
 
+table.iswc-papers .iswc-paper-title a {
+display:inline-block;
+width: 93%
+}
+
+table.iswc-papers .iswc-paper-title span {
+  display:inline-block;
+  width: 5%;
+  height:100%;
+  vertical-align: top;
+  font-size: x-large;
+}
+
 /* submenu */
 
 .iswc-navbar-back{

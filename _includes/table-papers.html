@@ -5,6 +5,16 @@
 			<td>
 				<div class='iswc-paper-title'>
 						<a href='{{ site.baseurl }}/files/{{ paper.file }}'>{{ paper.Title }}</a>
+						<span>
+						<a href="#" class="iswc-bookmark">
+							<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						</a>
+						{% if site.voting and paper.Track == 'poster' or paper.Track == 'demo' %}
+						<a href="#" class="iswc-voting">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+						</a>
+						{% endif %}
+					</span>
 				</div>
 				<div class='iswc-paper-authors'>
 					{{ paper.Authors }}
@@ -21,16 +31,6 @@
 				    {{ paper.Abstract }}
 				  </div>
 				</div>
-			</td>
-			<td>
-				<a href="#" class="iswc-bookmark">
-					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-				</a>
-				{% if site.voting and paper.Track == 'poster' or paper.Track == 'demo' %}
-				<a href="#" class="iswc-voting">
-					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-				</a>
-				{% endif %}
 			</td>
 		</tr>
 	{% endfor %}
