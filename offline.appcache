@@ -7,20 +7,27 @@ CACHE MANIFEST
 CACHE:
 /libs/bootstrap/css/bootstrap.min.css
 /libs/bootstrap/css/bootstrap-theme.min.css
+/css/main.css
 /css/iswc.css
+/css/rtable.css
+
 
 /libs/jquery/jquery.min.js
 /libs/bootstrap/js/bootstrap.min.js
+/libs
+/scripts/enhance-tabs.js
+/libs/indexeddb.shim.min.js
+/libs/promise-1.0.0.min.js
+/scripts/offline.js
 
 /pages/program.html
 /pages/program/accepted-papers.html
 /pages/program/accepted-posters-demos.html
-/pages/program/guidelines-authors.html
-
-/pages/organization.html
-/pages/attending.html
-/pages/sponsorship.html
-
+/pages/program/keynote-kitano.html
+/pages/program/keynote-mckeown.html
+/pages/program/keynote-bizer.html
+/pages/program/workshops.html
+/pages/program/tutorials.html
 
 NETWORK:
 *
