@@ -1,13 +1,13 @@
 /* all */
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
 body{
-	font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	background-color: #ddd;
 	padding:5px;
 }
