@@ -14,7 +14,7 @@
     		{% for pres in iswc_presentations %}
     			<li class="iswc-session iswc-session-{{ pres.Track }}" title="{{ pres.Track }}" id="{{pres.ID}}">
     				<div class='iswc-paper-title'>
-						<a href="/pages/program/accepted-papers.html#{{pres.ID}}">{{ pres.Title }}</a>
+						<a href="{{ site.baseurl }}/pages/program/accepted-papers.html#{{pres.ID}}">{{ pres.Title }}</a>
 					</div>
 					<div class='iswc-paper-authors'>
 						{{ pres.Authors }}
