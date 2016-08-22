@@ -192,18 +192,18 @@ table.iswc-pc td{
 
 /* Paper */
 
-table.iswc-paper{
+table.iswc-papers{
 	width:90%;
 	margin-left: 20px
 }
 
-table.iswc-paper .iswc-paper-title{
+table.iswc-papers .iswc-paper-title{
 	margin-top: 7px;
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
-table.iswc-paper .iswc-paper-authors{
+table.iswc-papers .iswc-paper-authors{
 	margin-top: 10px;
 	margin-bottom: 7px;
 	padding-left: 25px;
@@ -400,6 +400,10 @@ footer{
   content: "[J]";
 }
 
+button.iswc-show-favorites {
+  float:right;
+}
+
 /* for small screen */
 @media screen and (max-width: 600px){
 	.iswc-wrapper-left,
@@ -409,7 +413,6 @@ footer{
 		padding-right:5px;
 	}
 }
-
 
 /* for print */
 @media print {

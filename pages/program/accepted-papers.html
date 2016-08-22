@@ -8,7 +8,12 @@ ordered: 2
 status: published
 ---
 
-<h1 id="iswc-page-title">{{ page.title }}</h1>
+<h1 id="iswc-page-title">{{ page.title }}
+  <button type="button" class="btn btn btn-primary btn-xs iswc-show-favorites" data-toggle="button">
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorites
+  </button>
+</h1>
+
 
 <!-- ################################################################################  -->
 <style>

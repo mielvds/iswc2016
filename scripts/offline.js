@@ -1,13 +1,7 @@
 (function() {
-  var db, input, ul;
+  var db;
 
   databaseOpen()
-    .then(function() {
-      input = document.querySelector('input');
-      ul = document.querySelector('ul');
-      document.body.addEventListener('submit', onSubmit);
-      document.body.addEventListener('click', onClick);
-    })
     .then(refreshView);
 
   function databaseOpen() {
@@ -115,23 +109,55 @@
     });
   }
 
+  /* All bookmark logic below */
+  $('.iswc-show-favorites').on('click', function () {
+    if ($(this).hasClass('active')) {
+      showAll();
+    } else {
+      databaseBookmarksGet().then(filterAllBookmarks);
+    }
+  });
+
+
+  $('.iswc-bookmark').on('click', function (e) {
+    e.preventDefault();
+
+    var $star = $(this).children('span'),
+        id = $(this).parents('.iswc-paper').attr('id');
+
+    if(!$star.hasClass('glyphicon-star')) {
+      databaseBookmarksPut({_id:id}).then(function () {
+        console.log(id, 'bookmarked');
+        $star.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+      });
+    } else {
+      databaseBookmarksDelete({_id:id}).then(function () {
+        console.log(id, 'no longer bookmarked');
+        $star.addClass('glyphicon-star-empty').removeClass('glyphicon-star');
+      });
+    }
+  });
+
   function refreshView() {
     return databaseBookmarksGet().then(renderAllBookmarks);
   }
 
   function renderAllBookmarks(bookmarks) {
-    var html = '';
     bookmarks.forEach(function(bookmark) {
-      html += todoToHtml(bookmark);
+      $('#' + bookmark._id).find('.iswc-bookmark span').removeClass('glyphicon-star-empty').addClass('glyphicon-star');
     });
-    ul.innerHTML = html;
   }
 
-  function todoToHtml(bookmark) {
-    return '<li><button id="'+bookmark._id+'">delete</button>'+bookmark.text+'</li>';
+  function filterAllBookmarks(bookmarks) {
+    $('.iswc-paper').hide();
+
+    bookmarks.forEach(function(bookmark) {
+      $('#' + bookmark._id).show();
+    });
   }
 
-
-
+  function showAll() {
+    $('.iswc-paper').show();
+  }
 
 }());

@@ -1,9 +1,9 @@
-<table class="table iswc-paper">
+<table class="table iswc-papers">
 
 	{% for paper in iswc_papers %}
-		<tr>
+		<tr class='iswc-paper' id='{{ paper.ID }}'>
 			<td>
-				<div class='iswc-paper-title' id='{{ paper.ID }}'>
+				<div class='iswc-paper-title'>
 						<a href='/files/{{ paper.file }}'>{{ paper.Title }}</a>
 				</div>
 				<div class='iswc-paper-authors'>
