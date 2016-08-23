@@ -417,6 +417,13 @@ button.iswc-show-favorites {
   float:right;
 }
 
+button.iswc-show-favorites.active {
+  background-color: #265a88;
+      border-color: #245580;
+      color:#fff;
+      text-shadow: none;
+}
+
 /* for small screen */
 @media screen and (max-width: 600px){
 	.iswc-wrapper-left,
