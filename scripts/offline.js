@@ -123,7 +123,8 @@
     e.preventDefault();
 
     var $star = $(this).children('span'),
-        id = $(this).parents('.iswc-paper').attr('id');
+        $item = $(this).parents('.iswc-paper, .iswc-session'),
+        id = $item.attr('id');
 
     if(!$star.hasClass('glyphicon-star')) {
       databaseBookmarksPut({_id:id}).then(function () {
@@ -134,6 +135,10 @@
       databaseBookmarksDelete({_id:id}).then(function () {
         console.log(id, 'no longer bookmarked');
         $star.addClass('glyphicon-star-empty').removeClass('glyphicon-star');
+
+        if ($('.iswc-show-favorites').hasClass('active')){
+          $item.hide();
+        }
       });
     }
   });

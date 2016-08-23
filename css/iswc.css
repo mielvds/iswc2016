@@ -210,17 +210,21 @@ table.iswc-papers .iswc-paper-authors{
 	color: #888;
 }
 
-table.iswc-papers .iswc-paper-title a {
+table.iswc-papers .iswc-paper-title a, ul.iswc-session-list .iswc-paper-title a {
 display:inline-block;
 width: 93%
 }
 
-table.iswc-papers .iswc-paper-title span {
+table.iswc-papers .iswc-paper-title span, ul.iswc-session-list .iswc-paper-title span {
   display:inline-block;
   width: 5%;
   height:100%;
   vertical-align: top;
   font-size: x-large;
+}
+
+ul.iswc-session-list .iswc-paper-title span {
+  font-size: large;
 }
 
 /* submenu */
@@ -411,6 +415,16 @@ footer{
 .iswc-session-journal:before{
   color: #b38600;
   content: "[J]";
+}
+
+.iswc-session-workshop:before{
+  color: #9900cc;
+  content: "[W]";
+}
+
+.iswc-session-tutorial:before{
+  color: #333333;
+  content: "[T]";
 }
 
 button.iswc-show-favorites {

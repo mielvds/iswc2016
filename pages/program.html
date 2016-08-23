@@ -51,8 +51,14 @@ status:   published
     list-style: none;
   }
 
+  ul.block-arrange li{
+    display:inline-block;
+    width:150px;
+  }
+
   ul.iswc-session-list li{
     position: relative;
+    padding-bottom: 3px;
   }
 
   ul.iswc-session-list li:before{
@@ -109,6 +115,19 @@ status:   published
       <a href="#friday" aria-controls="friday" role="tab" data-toggle="tab">Friday <span class="visible-xs-inline visible-lg-block">October 21</span></a>
     </li>
   </ul>
+
+  <hr/>
+
+  <div style="padding-left:10px">
+    <ul class="iswc-session-list block-arrange text-center">
+      <li class="iswc-session-research">Research Track</li>
+      <li class="iswc-session-resource">Resources Track</li>
+      <li class="iswc-session-application">Applications Track</li>
+      <li class="iswc-session-journal">Journal Track</li>
+      <li class="iswc-session-workshop">Workshops</li>
+      <li class="iswc-session-tutorial">Tutorials</li>
+    </ul>
+  </div>
 <!-- Tab panes -->
 <div class="tab-content">
 
@@ -129,85 +148,118 @@ status:   published
             <tbody>
               <tr class="">
                 <td>Morning</td>
-                <td><a href="/pages/program/tutorials.html">Tutorial: 2nd Tutorial on RDF-Stream Processing (RSP 2016)</a></td>
+                <td>
+                  <ul class="iswc-session-list">
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://streamreasoning.org/events/rsp2016">
+                        Tutorial: 2nd Tutorial on RDF-Stream Processing (RSP 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://ontologydesignpatterns.org/wiki/ISWC2016Tutorial">
+                        Tutorial: Ontology Design Patterns for Linked Data Publishing
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://keki2016.linguistic-lod.org/">
+                        The KÉKI Workshop 2016 - Uses of Linguistic Linked Open Data
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://voila2016.visualdataweb.org/">
+                        VOILA 2016 Visualization and Interaction for Ontologies and Linked Data
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="https://bmdid2016.github.io/">
+                        First International Workshop on Biomedical Data Integration and Discovery (BMDID 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://c4i.gmu.edu/ursw/2016">
+                        12th International Workshop on Uncertainty Reasoning for the Semantic Web (URSW 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://linkedstartup.ifs.tuwien.ac.at/2016/call-for-papers/">
+                        LinkedStartup Workshop
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="https://sites.google.com/site/sqbenchmarks/">
+                        Tutorial: SPARQL Querying Benchmarks
+                      </a>
+                    </li>
+
+                  </ul>
+                </td>
                 <td class=""></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/tutorials.html">Tutorial: Ontology Design Patterns for Linked Data Publishing</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">The KÉKI Workshop 2016 - Uses of Linguistic Linked Open Data</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">VOILA 2016 Visualization and Interaction for Ontologies and Linked Data</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">First International Workshop on Biomedical Data Integration and Discovery (BMDID 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">12th International Workshop on Uncertainty Reasoning for the Semantic Web (URSW 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">LinkedStartup Workshop</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/tutorials.html">Tutorial: SPARQL Querying Benchmarks</a></td>
-                <td></td>
               </tr>
 
               <!-- -------------------------------- -->
-              <tr class="">
-                <td>Afternoon</td>
-                <td><a href="/pages/program/tutorials.html">Tutorial: 2nd Tutorial on RDF-Stream Processing (RSP 2016)</a></td>
+              <td>Afternoon</td>
+                <td>
+                  <ul class="iswc-session-list">
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://streamreasoning.org/events/rsp2016">
+                        Tutorial: 2nd Tutorial on RDF-Stream Processing (RSP 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://ontologydesignpatterns.org/wiki/ISWC2016Tutorial">
+                        Tutorial: Ontology Design Patterns for Linked Data Publishing
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://keki2016.linguistic-lod.org/">
+                        The KÉKI Workshop 2016 - Uses of Linguistic Linked Open Data
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop" class="iswc-session-workshop">
+                      <a target="_blank" href="http://voila2016.visualdataweb.org/">
+                        VOILA 2016 Visualization and Interaction for Ontologies and Linked Data
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="https://bmdid2016.github.io/">
+                        First International Workshop on Biomedical Data Integration and Discovery (BMDID 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://c4i.gmu.edu/ursw/2016">
+                        12th International Workshop on Uncertainty Reasoning for the Semantic Web (URSW 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://iswc2016ldtutorial.aksw.org/">
+                        Tutorial: Link Discovery - Algorithms, Approaches and Benchmarks
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://sensormeasurement.appspot.com/?p=ISWC2016Tutorial">
+                        Tutorial: Semantic Web meets Internet of Things (IoT) and Web of Things (WoT)
+                      </a>
+                    </li>
+
+                  </ul>
+                </td>
                 <td class=""></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/tutorials.html">Tutorial: Ontology Design Patterns for Linked Data Publishing</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">The KÉKI Workshop 2016 - Uses of Linguistic Linked Open Data</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">VOILA 2016 Visualization and Interaction for Ontologies and Linked Data</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">First International Workshop on Biomedical Data Integration and Discovery (BMDID 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">12th International Workshop on Uncertainty Reasoning for the Semantic Web (URSW 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/tutorials.html">Tutorial: Link Discovery - Algorithms, Approaches and Benchmarks</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/tutorials.html">Tutorial: Semantic Web meets Internet of Things (IoT) and Web of Things (WoT)</a></td>
-                <td></td>
               </tr>
             </tbody>
           </table>
@@ -238,100 +290,131 @@ status:   published
             <tbody>
               <tr class="">
                 <td>Morning</td>
-                <td><a href="/pages/program/workshops.html">The 7th International Workshop on Consuming Linked Data (COLD 2016)</a></td>
+                <td>
+                  <ul class="iswc-session-list">
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://dcc.uchile.cl/cold2016/">
+                        The 7th International Workshop on Consuming Linked Data (COLD 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-tutorial">
+                      <a target="_blank" href="http://sensormeasurement.appspot.com/?p=ISWC2016Tutorial">
+                        Tutorial: Semantic Web meets Internet of Things (IoT) and Web of Things (WoT)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://om2016.ontologymatching.org/">
+                        11th International Workshop on Ontology Matching (OM‐2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://semstats.org/2016/">
+                        Fourth International Workshop on Semantic Statistics (SemStats 2016)
+                      </a>
+
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://iesd2016.wordpress.com/">
+                        Intelligent Exploration of Semantic Data (IESD 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://ontologydesignpatterns.org/wiki/WOP:2016">
+                        7th Workshop on Ontology and Semantic Web Patterns (WOP2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://web.informatik.uni-mannheim.de/ld4ie2016">
+                        Linked Data for Information Extraction - LD4IE2016
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <aaa target="_blank" href="LINK">
+                        Doctor Consortium
+                      </aaa>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://streamreasoning.org/events/sr2016">
+                        Stream Reasoning 2016
+                      </a>
+                    </li>
+
+                  </ul>
+                </td>
                 <td class=""></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Tutorial: Semantic Web meets Internet of Things (IoT) and Web of Things (WoT)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">11th International Workshop on Ontology Matching (OM‐2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Fourth International Workshop on Semantic Statistics (SemStats 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Intelligent Exploration of Semantic Data (IESD 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">7th Workshop on Ontology and Semantic Web Patterns (WOP2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Linked Data for Information Extraction - LD4IE2016</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Doctoral Consortium</a></li></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Stream Reasoning 2016</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Linked Data for Information Extraction - LD4IE2016</a></td>
-                <td></td>
               </tr>
 
               <!-- -------------------------------- -->
-              <tr class="">
-                <td>Afternoon</td>
-                <td><a href="/pages/program/workshops.html">The 7th International Workshop on Consuming Linked Data (COLD 2016)</a></td>
+              <td>Afternoon</td>
+                <td>
+                  <ul class="iswc-session-list">
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://dcc.uchile.cl/cold2016/">
+                        The 7th International Workshop on Consuming Linked Data (COLD 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://project-hobbit.eu/events/blink-2016/">
+                        Workshop on Benchmarking Linked Data (BLINK)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://om2016.ontologymatching.org/">
+                        11th International Workshop on Ontology Matching (OM‐2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://semstats.org/2016/">
+                        Fourth International Workshop on Semantic Statistics (SemStats 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://iesd2016.wordpress.com/">
+                        Intelligent Exploration of Semantic Data (IESD 2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://ontologydesignpatterns.org/wiki/WOP:2016">
+                        7th Workshop on Ontology and Semantic Web Patterns (WOP2016)
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="https://nlpdbpedia2016.wordpress.com/">
+                        NLP & DBpedia 2016
+                      </a>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <aaa target="_blank" href="LINK">
+                        Doctor Consortium
+                      </aaa>
+                    </li>
+
+                    <li class="iswc-session-workshop">
+                      <a target="_blank" href="http://privon.semanticweb.org/">
+                        Society, Privacy and the Semantic Web - Policy and Technology
+                      </a>
+                    </li>
+
+                  </ul>
+                </td>
                 <td class=""></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Workshop on Benchmarking Linked Data (BLINK)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">11th International Workshop on Ontology Matching (OM‐2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Fourth International Workshop on Semantic Statistics (SemStats 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Intelligent Exploration of Semantic Data (IESD 2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">7th Workshop on Ontology and Semantic Web Patterns (WOP2016)</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">NLP &amp; DBpedia 2016</a></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Doctoral Consortium</a></li></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="no-flip"></td>
-                <td class="no-flip"><a href="/pages/program/workshops.html">Society, Privacy and the Semantic Web - Policy and Technology</a></td>
-                <td></td>
               </tr>
             </tbody>
           </table>
