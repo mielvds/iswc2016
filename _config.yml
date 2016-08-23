@@ -15,3 +15,4 @@ markdown: kramdown
 github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"
 
 voting: false
+paper_links: false
