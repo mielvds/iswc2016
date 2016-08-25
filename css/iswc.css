@@ -427,6 +427,11 @@ footer{
   content: "[T]";
 }
 
+.iswc-session-doctor:before{
+  color: #FF00BF;
+  content: "[D]";
+}
+
 button.iswc-show-favorites {
   float:right;
 }
