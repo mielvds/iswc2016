@@ -87,10 +87,11 @@ status: published
 </script>
 
 <ul id="top-menu" class="nav nav-pills nav-justified">
-	<li role="presentation"><a href="#" onclick="scrollToId('iswc-research')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Research Track</a></li>
-	<li role="presentation"><a href="#" onclick="scrollToId('iswc-resource')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Resources Track</a></li>
-	<li role="presentation"><a href="#" onclick="scrollToId('iswc-application')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Applications Track</a></li>
-	<li role="presentation"><a href="#" onclick="scrollToId('iswc-journal')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Journal Track</a></li>
+	<li role="presentation"><a href="#" onclick="scrollToId('iswc-research')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> <span>Research Track</span></a></li>
+	<li role="presentation"><a href="#" onclick="scrollToId('iswc-resource')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> <span>Resources Track</span></a></li>
+	<li role="presentation"><a href="#" onclick="scrollToId('iswc-application')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> <span>Applications Track</span></a></li>
+	<li role="presentation"><a href="#" onclick="scrollToId('iswc-journal')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> <span>Journal Track</span></a></li>
+  <li role="presentation"><a href="#" onclick="scrollToId('iswc-doctor')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> <span>Doctoral Consortium</span></a></li>
 </ul>
 
 <!-- ################################################################################  -->
@@ -137,6 +138,18 @@ status: published
 </div>
 
 {% assign iswc_papers = (site.data.papers | where: "Track", "journal" | sort: "Lastname")) %}
+{% include table-papers.html %}
+
+<hr/>
+
+<!-- ################################################################################  -->
+
+<div class="iswc-h2-wrap">
+	<h2 id="iswc-doctor" class="iswc-session-doctor" style="padding-bottom: 15px">Doctoral Consortium</h2>
+	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
+</div>
+
+{% assign iswc_papers = (site.data.papers | where: "Track", "doctoralconsortium" | sort: "Lastname")) %}
 {% include table-papers.html %}
 
 <hr/>

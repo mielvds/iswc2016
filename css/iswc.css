@@ -383,6 +383,10 @@ footer{
   margin-left: 0px;
 }
 
+#top-menu li span {
+  display: inline-block;
+}
+
 .iswc-day-nav {
   margin-left: 0px;
   margin-bottom: 10px;
