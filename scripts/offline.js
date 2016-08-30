@@ -165,4 +165,45 @@
     $('.iswc-paper, .iswc-session').show();
   }
 
+  $('#votingModal').on('hidden.bs.modal', function (e) {
+    $('.iswc-vote-progress').hide();
+    $('.iswc-vote-code').show();
+    $('.iswc-vote-success').hide();
+    $('.iswc-vote-error').hide();
+  })
+
+  $('.iswc-vote-submit').on('click', function () {
+    $('.iswc-vote-progress').show();
+    $('.iswc-vote-code').hide();
+    $(this).attr('disabled',"disabled");
+
+    $.ajax({
+      method: "POST",
+      url: "some.php",
+      data: { key: $('.iswc-vote-code').val() }
+    })
+    .done(function( msg ) {
+      $('.iswc-vote-success').show();
+    })
+    .fail(function( jqXHR, textStatus ) {
+      $('.iswc-vote-progress').hide();
+      $('.iswc-vote-code').show();
+      $(this).removeAttr('disabled');
+      $('.iswc-vote-error').text(textStatus).show();
+    });
+
+  });
+
+  $('.iswc-voting').on('click', function() {
+   	var $subject =  $(this).parents('.iswc-paper'),
+  			id = $subject.attr('id'),
+  			title = $subject.find('.iswc-paper-title a').text();
+
+  	$('#votingModal .modal-title').text('Vote for ' + id);
+  	$('#votingModal').find('.iswc-vote-title').html('You are about to vote for <i>' + title + '</i>');
+
+
+  	$('#votingModal').modal('show');
+  })
+
 }());

@@ -34,14 +34,6 @@ status: published
 	}
 </style>
 
-<script>
-	function scrollToId(target_id){
-		$('html, body').animate({
-	        scrollTop: $("#"+target_id).offset().top - 105
-	    }, 800);
-	}
-</script>
-
 <ul id="top-menu" class="nav nav-pills nav-justified">
 	<li role="presentation"><a href="#" onclick="scrollToId('iswc-poster')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Posters</a></li>
 	<li role="presentation"><a href="#" onclick="scrollToId('iswc-demo')"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Demos</a></li>
@@ -71,3 +63,42 @@ status: published
 {% include table-papers.html %}
 
 <hr/>
+
+<div class="modal fade" id="votingModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-success iswc-vote-success" style="display: none" role="alert">You have voted successfully!</div>
+				<div class="alert alert-danger iswc-vote-error" style="display: none" role="alert">This code has already been used!</div>
+				<p class="iswc-vote-title"></p>
+				<p class="iswc-vote-code">
+					<input type="text" class="form-control" placeholder="Enter your voting code here..." />
+				</p>
+				<div class="progress iswc-vote-progress" style="display: none">
+					<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+						Sending vote...
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-primary iswc-vote-submit">Vote</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script>
+	function scrollToId(target_id){
+		$('html, body').animate({
+	        scrollTop: $("#"+target_id).offset().top - 105
+	    }, 800);
+	}
+</script>

@@ -14,5 +14,5 @@ markdown: kramdown
 #Github URL
 github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"
 
-voting: false
+voting: true
 paper_links: false
