@@ -165,6 +165,10 @@
     $('.iswc-paper, .iswc-session').show();
   }
 
+  /* All voting logic below */
+
+  var url = "http://localhost/iswc2016/vote.php?vote=";
+
   $('#votingModal').on('hidden.bs.modal', function (e) {
     $('.iswc-vote-progress').hide();
     $('.iswc-vote-code').show();
@@ -179,7 +183,7 @@
 
     $.ajax({
       method: "POST",
-      url: "some.php",
+      url: url + $('.iswc-vode-id').text(),
       data: { key: $('.iswc-vote-code').val() }
     })
     .done(function( msg ) {
@@ -199,7 +203,7 @@
   			id = $subject.attr('id'),
   			title = $subject.find('.iswc-paper-title a').text();
 
-  	$('#votingModal .modal-title').text('Vote for ' + id);
+  	$('#votingModal .modal-title .iswc-vode-id').text(id);
   	$('#votingModal').find('.iswc-vote-title').html('You are about to vote for <i>' + title + '</i>');
 
 
