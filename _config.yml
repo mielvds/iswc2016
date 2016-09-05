@@ -2,7 +2,7 @@
 title: ISWC2016
 email: your-email@domain.com
 description: ISWC 2016 is the premier international forum, for the Semantic Web / Linked Data Community. Here, scientists, industry specialists, and practitioners meet to discuss the future of practical, scalable, user-friendly, and game changing solutions. Come and join us 17-21 October 2016 in Kobe to hear!
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/iswc2016" # the subpath of your site, e.g. /blog/
 url: "http://iswc2016.semanticweb.org/" # the base hostname & protocol for your site
 twitter_username: iswc2016
 github_username:  iswc2016
@@ -16,4 +16,4 @@ github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"
 
 voting: true
 paper_links: false
-offline: false
+offline: true
