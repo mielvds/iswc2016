@@ -16,3 +16,4 @@ github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"
 
 voting: true
 paper_links: false
+offline: false
