@@ -1,0 +1,27 @@
+---
+title: "Floorplan"
+updated:   2016-07-15 00:00:00
+layout: default
+group: program
+menu: sub
+ordered: 6
+status: published
+---
+<!-- ################################################################################  -->
+
+<h1>{{ page.title }}</h1>
+
+{% include floorplan.svg %}
+
+<script>
+
+$(function() {
+
+  /* Tabs fix for bootstrap */
+  var hash = window.location.hash;
+
+  $("_" + hash).css('fill','#337ab7');
+});
+
+
+</script>
