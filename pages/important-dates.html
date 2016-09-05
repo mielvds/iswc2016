@@ -8,53 +8,9 @@ status: published
 ---
 <h1>{{ page.title }}</h1>
 
-<!-- ################################################## -->
-<script>
-	function scrollToId(target_id){
-		$('html, body').animate({
-	        scrollTop: $("#"+target_id).offset().top - 100
-	    }, 800);
-	}
-</script>
-<!-- ################################################## -->
+ <div style="color:red"><i>Note:</i> All deadlines are midnight Hawaii time!</div>
 
-
-<hr/>
- <p class="text-center">
-  <a class="btn btn-primary btn-lg" style="color:#fff; href="#" onclick="scrollToId('next-item')">
-      Go to Upcoming Schedule !
-  </a>
-</p>
-
-<!------- News ---------->
-<div class="hidden-lg hidden-md"> 
-	<hr/>
-
-	<div class="panel panel-default">
-		<div class="panel-heading" >
-			<h3>Important News</h3>
-		</div>
-		<div class="panel-body">
-			{% include news.html %}
-		</div>
-	</div>
-</div>
-
-<!------- Content ---------->
-
-<!--
-<div class="alert alert-warning alert-dismissible fade in" role="alert"> 
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		<span aria-hidden="true">×</span>
-	</button> 
-	Note: All deadlines are midnight Hawaii time!
- </div>
- -->
-
-<hr/>
-
- <div class="allign-right" style="color:red">All deadlines are midnight Hawaii time!</div>
-
+<h3>Upcomong Schedule</h3>
 
 <table class="table table-hover">
   <thead>
@@ -65,101 +21,6 @@ status: published
   </thead>
   <tbody>
 	
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/calls/workshops.html">Workshop</a> proposals due</td>
-	    <td class="iswc-news-date">March 10, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/calls/tutorials.html">Tutorial</a> proposals due</td>
-	    <td class="iswc-news-date">March 15, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Notifications of <a href="{{site.baseurl}}/pages/program/workshops.html">workshop</a> proposals out</td>
-	    <td class="iswc-news-date">April 15, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Notifications of <a href="{{site.baseurl}}/pages/program/tutorials.html">tutorial</a> proposals out</td>
-	    <td class="iswc-news-date">April 20, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Abstracts due (<a href="{{site.baseurl}}/pages/calls/research-track.html">Research</a>, <a href="{{site.baseurl}}/pages/calls/applications.html">Application</a>, <a href="{{site.baseurl}}/pages/calls/resource-track.html">Resource</a> tracks)</td>
-	    <td class="iswc-news-date">April 20, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Submissions due (<a href="{{site.baseurl}}/pages/calls/research-track.html">Research</a>, <a href="{{site.baseurl}}/pages/calls/applications.html">Application</a>, <a href="{{site.baseurl}}/pages/calls/resource-track.html">Resource</a> tracks)</td>
-	    <td class="iswc-news-date">April 30, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/calls/doctoral-consortium.html">DC</a> submissions due</td>
-	    <td class="iswc-news-date">May 30, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Author rebuttal period starts (Research, Application, Resource tracks)</td>
-	    <td class="iswc-news-date">June 12, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Author rebuttal period ends (Research, Application, Resource tracks)</td>
-	    <td class="iswc-news-date">June 15, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Notifications for Research, Applications, Resource tracks out</td>
-	    <td class="iswc-news-date">June 30, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/attending.html">Registration</a> starts</td>
-	    <td class="iswc-news-date">June 30, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Notifications for DC applicants out</td>
-	    <td class="iswc-news-date">July 01, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/calls/posters-demos.html">Poster/Demo</a> submissions Due</td>
-	    <td class="iswc-news-date">July 07, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td><a href="{{site.baseurl}}/pages/program/workshops.html">Workshop</a> papers due</td>
-	    <td class="iswc-news-date">July 07, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Metadata for Research, Applications, Resource tracks due</td>
-	    <td class="iswc-news-date">July 08, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Camera-ready papers for Research, Applications, Resource tracks due</td>
-	    <td class="iswc-news-date">July 18, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Workshop paper notifications sent</td>
-	    <td class="iswc-news-date">July 30, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Poster/Demo notifications sent</td>
-	    <td class="iswc-news-date">August 07, 2016</td>
-	</tr>
-
-	<tr class="iswc-overdue">
-	    <td>Camera-ready copies for DC papers</td>
-	    <td class="iswc-news-date">August 15, 2016</td>
-	</tr>
-
 
 <!-- ********** NEXT *********** -->
 	<tr id="next-item" class="info"> 
@@ -167,6 +28,166 @@ status: published
 	</tr>
 <!-- ********** NEXT *********** -->
 
+
+	<tr>
+	    <td>Turorial materials due</td>
+	    <td class="iswc-news-date">September 19, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Last day to reserve a hotel room at confence rates</td>
+	    <td class="iswc-news-date">September 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Last day to avoid late <a href="{{site.baseurl}}/pages/attending.html">registration</a> fee</td>
+	    <td class="iswc-news-date">October 05, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/calls/lightning-talks.html">Lightning Talks</a> submission due</td>
+	    <td class="iswc-news-date">October 20, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/program/mentoring-lunch.html">Mentoring Lunch</a> registration due</td>
+	    <td class="iswc-news-date">October 20, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>
+	    	<a href="{{ site.baseurl }}/pages/program.html" style="font-size:1.2em;">Workshops and tutorials</a>
+	    </td>
+	    <td class="iswc-news-date">
+	    	October 17-18, 2016<br/>
+	    	<span style="font-size:0.8em; margin-left: 7px ">(Japan time)</span>
+	    </td>
+	</tr>
+
+	<tr>
+	    <td>
+	    	<a href="{{ site.baseurl }}/pages/program.html" style="font-size:1.2em;">Conference</a> 
+	    </td>
+	    <td class="iswc-news-date">
+	    	October 19-21, 2016<br/>
+	    	<span style="font-size:0.8em; margin-left: 7px ">(Japan time)</span>
+	    </td>
+	</tr>
+
+	<tr><td></td><td></td></tr>
+
+  </tbody>
+ </table>
+
+<hr/>
+
+<!-- ################################################################ -->
+
+<h3 style="color:#AAA;">Overdue Schedule</h3>
+
+<table class="table table-hover iswc-overdue">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th  class="iswc-news-date" style="width:200px">Due date</th>
+    </tr>
+  </thead>
+  <tbody>
+	
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/calls/workshops.html">Workshop</a> proposals due</td>
+	    <td class="iswc-news-date">March 10, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/calls/tutorials.html">Tutorial</a> proposals due</td>
+	    <td class="iswc-news-date">March 15, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Notifications of <a href="{{site.baseurl}}/pages/program/workshops.html">workshop</a> proposals out</td>
+	    <td class="iswc-news-date">April 15, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Notifications of <a href="{{site.baseurl}}/pages/program/tutorials.html">tutorial</a> proposals out</td>
+	    <td class="iswc-news-date">April 20, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Abstracts due (<a href="{{site.baseurl}}/pages/calls/research-track.html">Research</a>, <a href="{{site.baseurl}}/pages/calls/applications.html">Application</a>, <a href="{{site.baseurl}}/pages/calls/resource-track.html">Resource</a> tracks)</td>
+	    <td class="iswc-news-date">April 20, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Submissions due (<a href="{{site.baseurl}}/pages/calls/research-track.html">Research</a>, <a href="{{site.baseurl}}/pages/calls/applications.html">Application</a>, <a href="{{site.baseurl}}/pages/calls/resource-track.html">Resource</a> tracks)</td>
+	    <td class="iswc-news-date">April 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/calls/doctoral-consortium.html">DC</a> submissions due</td>
+	    <td class="iswc-news-date">May 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Author rebuttal period starts (Research, Application, Resource tracks)</td>
+	    <td class="iswc-news-date">June 12, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Author rebuttal period ends (Research, Application, Resource tracks)</td>
+	    <td class="iswc-news-date">June 15, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Notifications for Research, Applications, Resource tracks out</td>
+	    <td class="iswc-news-date">June 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/attending.html">Registration</a> starts</td>
+	    <td class="iswc-news-date">June 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Notifications for DC applicants out</td>
+	    <td class="iswc-news-date">July 01, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/calls/posters-demos.html">Poster/Demo</a> submissions Due</td>
+	    <td class="iswc-news-date">July 07, 2016</td>
+	</tr>
+
+	<tr>
+	    <td><a href="{{site.baseurl}}/pages/program/workshops.html">Workshop</a> papers due</td>
+	    <td class="iswc-news-date">July 07, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Metadata for Research, Applications, Resource tracks due</td>
+	    <td class="iswc-news-date">July 08, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Camera-ready papers for Research, Applications, Resource tracks due</td>
+	    <td class="iswc-news-date">July 18, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Workshop paper notifications sent</td>
+	    <td class="iswc-news-date">July 30, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Poster/Demo notifications sent</td>
+	    <td class="iswc-news-date">August 07, 2016</td>
+	</tr>
+
+	<tr>
+	    <td>Camera-ready copies for DC papers</td>
+	    <td class="iswc-news-date">August 15, 2016</td>
+	</tr>
 
 	<tr>
 	    <td>Camera-ready papers for workshops</td>
@@ -188,33 +209,8 @@ status: published
 	    <td class="iswc-news-date">September 02, 2016</td>
 	</tr>
 
-	<tr>
-	    <td>Turorial materials due</td>
-	    <td class="iswc-news-date">September 19, 2016</td>
-	</tr>
-
-	<tr>
-	    <td>Last day to reserve a hotel room at confence rates</td>
-	    <td class="iswc-news-date">September 30, 2016</td>
-	</tr>
-
-	<tr>
-	    <td>Last day to avoid late <a href="{{site.baseurl}}/pages/attending.html">registration</a> fee</td>
-	    <td class="iswc-news-date">October 05, 2016</td>
-	</tr>
-
-	<tr>
-	    <td>Workshops and tutorials</td>
-	    <td class="iswc-news-date">October 17-18, 2016</td>
-	</tr>
-
-	<tr>
-	    <td>Conference</td>
-	    <td class="iswc-news-date">October 19-21, 2016</td>
-	</tr>
+	<tr><td></td><td></td></tr>
 
   </tbody>
  </table>
-
-
  
