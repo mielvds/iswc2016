@@ -180,17 +180,21 @@
 
     $.ajax({
       method: "POST",
-      url: votingURL + '?vote=' + $('.iswc-vode-id').text() + '&key=' + $('.iswc-vote-code').val(),
+      url: votingURL + '?' + $.param({vote: $('.iswc-vode-id').text(), key: $('.iswc-vote-code input').val()}),
       data: { key: $('.iswc-vote-code').val() }
     })
     .done(function( msg ) {
       $('.iswc-vote-success').show();
     })
-    .fail(function( jqXHR, textStatus ) {
+    .fail(function( jqXHR, textStatus, errorThrown) {
       $('.iswc-vote-progress').hide();
       $('.iswc-vote-code').show();
-      $(this).removeAttr('disabled');
-      $('.iswc-vote-error').text(textStatus).show();
+      $('.iswc-vote-submit').removeAttr('disabled');
+
+      if (jqXHR.status > 500 )
+        $('.iswc-vote-error').text('Something went wrong (' + jqXHR.status + '): ' + errorThrown);
+
+      $('.iswc-vote-error').show();
     });
 
   });
