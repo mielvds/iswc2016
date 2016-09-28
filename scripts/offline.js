@@ -166,9 +166,6 @@
   }
 
   /* All voting logic below */
-
-  var url = "http://localhost/iswc2016/vote.php?vote=";
-
   $('#votingModal').on('hidden.bs.modal', function (e) {
     $('.iswc-vote-progress').hide();
     $('.iswc-vote-code').show();
@@ -183,7 +180,7 @@
 
     $.ajax({
       method: "POST",
-      url: url + $('.iswc-vode-id').text(),
+      url: votingURL + '?vote=' + $('.iswc-vode-id').text() + '&key=' + $('.iswc-vote-code').val(),
       data: { key: $('.iswc-vote-code').val() }
     })
     .done(function( msg ) {

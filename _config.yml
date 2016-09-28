@@ -15,5 +15,6 @@ markdown: kramdown
 github_ghpages: "https://github.com/iswc2016/iswc2016/blob/gh-pages"
 
 voting: false
+voting_url: "http://abemama.lodac.nii.ac.jp/iswc-vote/vote.php"
 paper_links: false
 offline: false
