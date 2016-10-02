@@ -171,7 +171,12 @@
     $('.iswc-vote-code').show();
     $('.iswc-vote-success').hide();
     $('.iswc-vote-error').hide();
-  })
+  });
+
+  $('#votingModal').on('show.bs.modal', function (e) {
+    $('.iswc-vote-submit').show();
+    $('.iswc-vote-cancel').text('Cancel');
+  });
 
   $('.iswc-vote-submit').on('click', function () {
     $('.iswc-vote-progress').show();
@@ -185,6 +190,11 @@
     })
     .done(function( msg ) {
       $('.iswc-vote-success').show();
+      $('.iswc-vote-progress').hide();
+      $('.iswc-vote-code').hide();
+      $('.iswc-vote-submit').hide();
+      $('.iswc-vote-title').hide();
+      $('.iswc-vote-cancel').text('Close');
     })
     .fail(function( jqXHR, textStatus, errorThrown) {
       $('.iswc-vote-progress').hide();

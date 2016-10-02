@@ -9,9 +9,9 @@
 							<a href="#" class="iswc-bookmark">
 								<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 							</a>
-							{% if site.voting and paper.Track == 'poster' or paper.Track == 'demo' %}
-							<a href="#" class="iswc-voting">
-								<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+							{% if site.paper_links %}
+							<a target="_blank" href="{{ site.paper_url }}/{{ paper.file }}" class="iswc-download">
+								<span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
 							</a>
 							{% endif %}
 						</span>
@@ -22,9 +22,14 @@
 				<div class="text-right">
 					{% if paper.Start != null %}<a href="{{ site.baseurl }}/pages/program.html#{{ paper.Start | date: "%A" | downcase }}">{{ paper.Start | date: "%a, %b %e @ %R" }}</a>{% endif %}{% if paper.Room != null %} | <a href="{{ site.baseurl }}/pages/program/floorplan.html#{{ paper.Room | uri_escape }}">{{ paper.Room }}</a>{% endif %}
 				{% if paper.Abstract != null %}
-				 | <a class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline" role="button" data-toggle="collapse" href="#{{ paper.ID }}-abstract" aria-expanded="false" aria-controls="{{ paper.ID }}-abstract">
+				 <span class=".hidden-xs">|</span> <a class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline" role="button" data-toggle="collapse" href="#{{ paper.ID }}-abstract" aria-expanded="false" aria-controls="{{ paper.ID }}-abstract">
 								<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>	Abstract
 
+				</a>
+				{% endif %}
+				{% if site.voting and paper.Track == 'poster' or paper.Track == 'demo' %}
+				| <a href="#" class="iswc-voting">
+					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Vote
 				</a>
 				{% endif %}
 				</div>

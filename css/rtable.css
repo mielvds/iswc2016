@@ -33,17 +33,17 @@ table.rtable>thead>tr>th {
 
 table.rtable tr td:first-child{
   padding-left:7px;
-  width:25%;
+  width:20%;
 }
 
 table.rtable tr td:nth-child(2){
   padding-left:7px;
-  width:50%;
+  width:60%;
 }
 
 table.rtable tr td:nth-child(3){
   padding-left:7px;
-  width:25%;
+  width:20%;
 }
 
 @media screen and (max-width: 600px) {

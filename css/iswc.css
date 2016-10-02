@@ -215,6 +215,10 @@ display:inline-block;
 width: 93%
 }
 
+.iswc-actions {
+  display:flex;
+}
+
 table.iswc-papers .iswc-paper-title span, ul.iswc-session-list .iswc-paper-title span {
   display:inline-block;
   width: 5%;
