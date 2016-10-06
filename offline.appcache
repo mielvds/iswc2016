@@ -35,6 +35,7 @@ CACHE:
 {{ site.baseurl }}/pages/program/workshops.html
 {{ site.baseurl }}/pages/program/tutorials.html
 {{ site.baseurl }}/pages/program/floorplan.html
+{{ site.baseurl }}/pages/program/dc-program.html
 
 NETWORK:
 *
