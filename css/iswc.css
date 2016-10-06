@@ -231,6 +231,12 @@ ul.iswc-session-list .iswc-paper-title span {
   font-size: large;
 }
 
+.iswc-paper-time {
+  color: #888;
+font-size: 0.9em;
+  font-style: italic;
+}
+
 /* submenu */
 
 .iswc-navbar-back{

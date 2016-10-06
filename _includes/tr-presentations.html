@@ -13,7 +13,7 @@
     	<ul class="iswc-session-list">
     		{% for pres in iswc_presentations %}
     			<li class="iswc-session iswc-session-{{ pres.Track }}" title="{{ pres.Track }}" id="{{pres.ID}}">
-    				<div class='iswc-paper-title'>
+    				<div class="iswc-paper-title">
 						<a href="{{ site.baseurl }}/pages/program/accepted-papers.html#{{pres.ID}}">{{ pres.Title }}</a>
             <span class="iswc-actions">
               <a href="#" class="iswc-bookmark">
@@ -26,9 +26,14 @@
               {% endif %}
             </span>
 					</div>
-					<div class='iswc-paper-authors'>
+					<div class="iswc-paper-authors">
 						{{ pres.Authors }}
 					</div>
+          {% if pres.Start != null %}
+          <div class="iswc-paper-time">
+            {{ pres.Start | date: "%R" }}
+          </div>
+          {% endif %}
     			</li>
     		{% endfor %}
     	</ul>
