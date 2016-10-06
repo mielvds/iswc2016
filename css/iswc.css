@@ -210,13 +210,26 @@ table.iswc-papers .iswc-paper-authors{
 	color: #888;
 }
 
-table.iswc-papers .iswc-paper-title a, ul.iswc-session-list .iswc-paper-title a {
-display:inline-block;
-width: 93%
+table.iswc-papers .iswc-paper-title a {
+  display: inline-block;
+      width: 93%;
+}
+
+.iswc-paper {
+  display:inline-block;
+  width: 85%;
 }
 
 .iswc-actions {
-  display:flex;
+  width: 10%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: large;
+  text-align: right;
+}
+
+.iswc-paper-abstract {
+  margin-top: 1em;
 }
 
 table.iswc-papers .iswc-paper-title span, ul.iswc-session-list .iswc-paper-title span {
@@ -233,7 +246,7 @@ ul.iswc-session-list .iswc-paper-title span {
 
 .iswc-paper-time {
   color: #888;
-font-size: 0.9em;
+font-size: 0.7em;
   font-style: italic;
 }
 
