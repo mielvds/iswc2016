@@ -1,10 +1,10 @@
 ---
 title: "Accepted Posters and Demos"
-updated:   2016-08-04 00:00:00
+updated:   2016-10-05 00:00:00
 layout: default
 group: program
 menu: sub
-ordered: 3
+ordered: 2
 status: published
 ---
 
@@ -46,7 +46,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "Lastname")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "PIndex")) %}
 {% include table-papers.html %}
 
 
@@ -59,7 +59,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "Lastname")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "PIndex")) %}
 {% include table-papers.html %}
 
 <hr/>

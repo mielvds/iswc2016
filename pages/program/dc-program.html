@@ -4,7 +4,7 @@ updated:   2016-09-29 00:00:00
 layout: default
 group: program
 menu: sub
-ordered: 7
+ordered: 9
 status: published
 ---
 
@@ -18,6 +18,42 @@ status: published
     padding-left:7px;
     width:75%;
   }
+
+  ul.iswc-session-list{
+    list-style: none;
+  }
+
+  ul.block-arrange li{
+    display:inline-block;
+    width:140px;
+  }
+
+  ul.iswc-session-list li{
+    position: relative;
+    padding-bottom: 3px;
+  }
+
+  ul.iswc-session-list li:before{
+    position: absolute;
+    top: 0;
+    margin: 1px 0 0 -25px;
+    font-size: 0.8em;
+    display: inline-block;
+    font-family: monospace;
+  }
+
+  /* List of Preseantation */
+
+  ul.iswc-session-list .iswc-paper-title{
+  }
+
+  ul.iswc-session-list .iswc-paper-authors{
+    margin-top: 2px;
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 5px;
+  }
+
 </style>
 
 <h1>{{ page.title }}</h1>
@@ -62,37 +98,55 @@ status: published
                   (15 minutes for each presentation)
 
                   <hr/>
-                  <ul>
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Prasojo.pdf">
-                  			Radityo Eko Prasojo: Entity-Relationship Extraction from Wikipedia Unstructured Text
-                  		</aa>
+                  <ul class="iswc-session-list">
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Prasojo.pdf">
+                    			Entity-Relationship Extraction from Wikipedia Unstructured Text
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Radityo Eko Prasojo
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Amith.pdf">
-                  			Muhammad Amith: Ontology-based dialogue systems for improved patient HPV vaccine knowledge and perception
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Amith.pdf">
+                    			Ontology-based dialogue systems for improved patient HPV vaccine knowledge and perception
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Muhammad Amith
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Hasnain.pdf">
-                  			Syed Muhammad Ali Hasnain: A - Posteriori Data Integration for Life Sciences
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Hasnain.pdf">
+                    			A - Posteriori Data Integration for Life Sciences
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Syed Muhammad Ali Hasnain
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Anh.pdf">
-                  			Le Tuan Anh: Linked Data processing for Embedded Devices
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Anh.pdf">
+                    			Linked Data processing for Embedded Devices
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Le Tuan Anh
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="">
-                  			(12:00) Poster Session 1
-                  		</aa>
-                  	</li>
                   </ul>
+                  			
+                  12:00 -- Poster Session 1
+
                 </td>
               </tr>
 <!--
@@ -118,44 +172,66 @@ status: published
                   (15 minutes for each presentation)
                   <hr/>
 
-                  <ul>
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_VanderSande.pdf">
-                  			Miel Vander Sande: Studying Metadata for better client-server trade-offs in Linked Data publishing
-                  		</aa>
+                  <ul class="iswc-session-list">
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_VanderSande.pdf">
+                    			Studying Metadata for better client-server trade-offs in Linked Data publishing
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Miel Vander Sande
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Terziev.pdf">
-                  			Yordan Terziev: Feature Generation using Ontologies during Induction of Decision Trees on Linked Data
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Terziev.pdf">
+                    			Feature Generation using Ontologies during Induction of Decision Trees on Linked Data
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Yordan Terziev
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ahn.pdf">
-                  			Jinhyun Ahn: Optimization Techniques for 2-hop Labeling of Dynamic Directed Acyclic Graphs
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ahn.pdf">
+                    			Optimization Techniques for 2-hop Labeling of Dynamic Directed Acyclic Graphs
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Jinhyun Ahn
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ren.pdf">
-                  			Xiangnan Ren: Towards a distributed, scalable and real-time RDF Stream Processing engine
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ren.pdf">
+                    			Towards a distributed, scalable and real-time RDF Stream Processing engine
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Xiangnan Ren
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Georgala.pdf">
-                  			Kleanthi Georgala: Scalable Link Discovery for Modern Data-Driven Applications
-                  		</aa>
-                  	</li>
-
-                  	<li>
-                  		<aa target="_blank" href="">
-                  			(13:15) Poster Session 2
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Georgala.pdf">
+                    			Scalable Link Discovery for Modern Data-Driven Applications
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Kleanthi Georgala
+                      </div>
                   	</li>
 
                   </ul>
+                  
+                  13:15 -- Poster Session 2
+  
                 </td>
               </tr>
 
@@ -177,37 +253,56 @@ status: published
                   <strong>Session 3</strong> <br/>
                   (15 minutes for each presentation)
                   <hr/>
-                  <ul>
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Masuda.pdf">
-                  			Takeshi Masuda: Ontology Refinement and Evaluation System based on Similarity of Is-a Hierarchies
-                  		</aa>
+                  <ul class="iswc-session-list">
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Masuda.pdf">
+                    			Ontology Refinement and Evaluation System based on Similarity of Is-a Hierarchies
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Takeshi Masuda
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ivanova.pdf">
-                  			Valentina Ivanova: Applications of Large Displays: Advancing User Support in Large Scale Ontology Alignment
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Ivanova.pdf">
+                    			Applications of Large Displays: Advancing User Support in Large Scale Ontology Alignment
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Valentina Ivanova
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Neumaier.pdf">
-                  			Sebastian Neumaier: Improving Open Data Usability through Semantics
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_Neumaier.pdf">
+                    			Improving Open Data Usability through Semantics
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Sebastian Neumaier
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_VanHerwegen.pdf">
-                  			Joachim Van Herwegen: Querying Distributed Heterogeneous Linked Data Interfaces through Reasoning
-                  		</aa>
+                  	<li class="iswc-session-doctor">
+                      <div class="iswc-paper-title">
+                    		<aa target="_blank" href="{{ site.baseurl }}/files/papers/dc/DC_VanHerwegen.pdf">
+                    			Querying Distributed Heterogeneous Linked Data Interfaces through Reasoning
+                    		</aa>
+                      </div>
+                      <div class="iswc-paper-authors">
+                        Joachim Van Herwegen
+                      </div>
                   	</li>
 
-                  	<li>
-                  		<aa target="_blank" href="">
-                  			(17:00) Poster Session 3
-                  		</aa>
-                  	</li>
                   </ul>
+
+                  17:00 -- Poster Session 3
+                  
+                  
                 </td>
               </tr>
 

@@ -4,13 +4,13 @@
 		<tr class='iswc-paper' id='{{ paper.ID }}'>
 			<td>
 				<div class='iswc-paper-title'>
-						<a href='{% if site.paper_links %}{{ site.paper_url }}/{{ paper.file }}{% else %}#{{ paper.ID }}{% endif %}'>{{ paper.Title }}</a>
+						<a href='{% if site.paper_links %}{% if paper.file contains "http" %}{{ paper.file }}{% else %}{{ site.paper_url }}/{{ paper.file }}{% endif %}{% else %}#{{ paper.ID }}{% endif %}'>{% if paper.Track == 'demo' %}[D{{ paper.PIndex }}] {% elsif paper.Track == 'poster' %}[P{{ paper.PIndex}}] {% endif %}{{ paper.Title }}</a>
 						<span>
 							<a href="#" class="iswc-bookmark">
 								<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 							</a>
 							{% if site.paper_links %}
-							<a target="_blank" href="{{ site.paper_url }}/{{ paper.file }}" class="iswc-download">
+							<a target="_blank" href="{% if paper.file contains "http" %}{{ paper.file }}{% else %}{{ site.paper_url }}/{{ paper.file }}{% endif %}" class="iswc-download">
 								<span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
 							</a>
 							{% endif %}

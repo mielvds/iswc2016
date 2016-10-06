@@ -1,0 +1,55 @@
+---
+title: "Photos"
+updated:   2016-07-07 00:00:00
+layout: default
+group: misc
+menu: sub
+ordered: 1
+status: published
+---
+<!-- ################################################################################  -->
+
+<h1>{{ page.title }}</h1>
+
+
+	<link href="{{ site.baseurl }}/libs/nanogallery/css/nanogallery.css" rel="stylesheet" type="text/css">
+	<link href="{{ site.baseurl }}/libs/nanogallery/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
+	<link href="{{ site.baseurl }}/libs/nanogallery/css/themes/light/nanogallery_light.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="{{ site.baseurl }}/libs/nanogallery/js/jquery.nanogallery.js"></script>
+
+	<style>
+		.nanoGalleryNavigationbarContainer{
+			width: 100% !important;
+		}
+	</style>
+
+<div id="nanoGallery2"></div>
+
+<script>
+$(document).ready(function () {
+      $("#nanoGallery2").nanoGallery({
+          kind: 'picasa',
+          userID: '105052264761204946882',
+          albumSorting: 'titleAsc',
+          thumbnailHoverEffect:'imageScale150'
+      });
+
+
+
+
+  });
+
+
+
+</script>
+
+
+<hr/>
+
+<div class="text-center">
+	powered by http://nanogallery.brisbois.fr/
+</div>
+
+<!-- ################################################################################  -->
+
+
