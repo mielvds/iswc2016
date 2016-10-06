@@ -1,7 +1,7 @@
 <table class="table iswc-papers">
 
 	{% for paper in iswc_papers %}
-		<tr id='{{ paper.ID }}'>
+		<tr class="iswc-paper" id='{{ paper.ID }}'>
 			<td>
 				<div class='iswc-paper-title'>
 						<a href='{% if site.paper_links %}{% if paper.file contains "http" %}{{ paper.file }}{% else %}{{ site.paper_url }}/{{ paper.file }}{% endif %}{% else %}#{{ paper.ID }}{% endif %}'>{% if paper.Track == 'demo' %}[D{{ paper.PIndex }}] {% elsif paper.Track == 'poster' %}[P{{ paper.PIndex}}] {% endif %}{{ paper.Title }}</a>
