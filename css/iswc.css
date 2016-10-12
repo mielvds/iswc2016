@@ -454,6 +454,7 @@ footer{
   content: "[T]";
 }
 
+.iswc-session-doctoralconsortium:before,
 .iswc-session-doctor:before{
   color: #FF00BF;
   content: "[D]";
