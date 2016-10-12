@@ -1,0 +1,31 @@
+{% assign iswc_presentations = (site.data.papers | where: "Session", iswc_session_name | sort: "PIndex")) %}
+
+<ul class="iswc-session-list">
+	{% for pres in iswc_presentations %}
+		<li class="iswc-session iswc-session-{{ pres.Track }}" title="{{ pres.Track }}" id="{{pres.ID}}">
+      <div class="iswc-paper">
+				<div class="iswc-paper-title">
+				<a href="{{ site.baseurl }}/pages/program/accepted-papers.html#{{pres.ID}}">{{ pres.Title }}</a>
+			</div>
+			<div class="iswc-paper-authors">
+				{{ pres.Authors }}
+			</div>
+    </div>
+    <div class="iswc-actions">
+      {% if site.paper_links %}
+      <a target="_blank" href="{% if pres.file contains "http" %}{{ pres.file }}{% else %}{{ site.paper_url }}/{{ pres.file }}{% endif %}" class="iswc-download" title="Download PDF">
+        <span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
+      </a>
+      {% endif %}
+      <a href="#" class="iswc-bookmark">
+        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+      </a>
+      {% if pres.Start != null %}
+      <div class="iswc-paper-time">
+        {{ pres.Start | date: "%R" }}
+      </div>
+      {% endif %}
+    </div>
+		</li>
+	{% endfor %}
+</ul>
