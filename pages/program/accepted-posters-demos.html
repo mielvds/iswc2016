@@ -46,7 +46,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "ID")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "NR")) %}
 {% include table-papers.html %}
 
 
@@ -59,7 +59,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "ID")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "NR")) %}
 {% include table-papers.html %}
 
 <hr/>

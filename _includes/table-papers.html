@@ -4,7 +4,7 @@
 		<tr class="iswc-paper" id='{{ paper.ID }}'>
 			<td>
 				<div class='iswc-paper-title'>
-						<a href='{% if site.paper_links %}{% if paper.file contains "http" %}{{ paper.file }}{% else %}{{ site.paper_url }}/{{ paper.file }}{% endif %}{% else %}#{{ paper.ID }}{% endif %}'>{% if paper.Track == 'demo' %}[D{{ paper.ID }}] {% elsif paper.Track == 'poster' %}[P{{ paper.ID}}] {% endif %}{{ paper.Title }}</a>
+						<a href='{% if site.paper_links %}{% if paper.file contains "http" %}{{ paper.file }}{% else %}{{ site.paper_url }}/{{ paper.file }}{% endif %}{% else %}#{{ paper.ID }}{% endif %}'>{% if paper.Track == 'demo' %}[D{{ paper.NR }}] {% elsif paper.Track == 'poster' %}[P{{ paper.NR}}] {% endif %}{{ paper.Title }}</a>
 						<span>
 							<a href="#" class="iswc-bookmark">
 								<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
