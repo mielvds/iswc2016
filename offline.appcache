@@ -12,7 +12,6 @@ CACHE:
 {{ site.baseurl }}/css/iswc.css
 {{ site.baseurl }}/css/rtable.css
 
-
 {{ site.baseurl }}/libs/jquery/jquery.min.js
 {{ site.baseurl }}/libs/bootstrap/js/bootstrap.min.js
 {{ site.baseurl }}/scripts/enhance-tabs.js

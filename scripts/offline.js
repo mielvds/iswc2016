@@ -213,11 +213,11 @@
    	var $subject =  $(this).parents('.iswc-paper'),
   			id = $subject.attr('id'),
   			title = $subject.find('.iswc-paper-title a').text(),
-        PIndex = title.substring(0,4);
+        PIndex = title.substring(1,4);
 
   	$('#votingModal .modal-title .iswc-vode-id').text(PIndex);
   	$('#votingModal').find('.iswc-vote-title').html('You are about to vote for <i>' + title + '</i>');
-
+    $('#votingModal').find('.iswc-vote-code input').val('');
 
   	$('#votingModal').modal('show');
   })
