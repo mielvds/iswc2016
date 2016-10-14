@@ -56,7 +56,11 @@ status: published
 
 </style>
 
-<h1>{{ page.title }}</h1>
+<h1 id="iswc-page-title">{{ page.title }}
+  <button type="button" class="btn btn-default btn-xs iswc-show-favorites" data-toggle="button">
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorites
+  </button>
+</h1>
 
 
 <div class="tab-content">
@@ -92,7 +96,7 @@ status: published
               <!-- -------------------------------- -->
 
               <tr class="">
-                <td>11:00 - 12:30</td>
+                <td>11:00 - 12:00</td>
                 <td>
                   <strong>Session 1</strong> <br/>
                   (15 minutes for each presentation)
@@ -100,9 +104,15 @@ status: published
                   <hr/>
                   {% assign iswc_session_name = "Session 1" %}
                   {% include list-presentations.html %}
-                  			
-                  12:00 -- Poster Session 1
+                </td>
+              </tr>
 
+              <!-- -------------------------------- -->
+
+              <tr class="">
+                <td>12:00 - 12:30</td>
+                <td>
+                  Poster Session 1
                 </td>
               </tr>
 <!--
@@ -122,7 +132,7 @@ status: published
               <!-- -------------------------------- -->
 
               <tr class="">
-                <td>14:00 - 15:45</td>
+                <td>14:00 - 15:15</td>
                 <td>
                   <strong>Session 2</strong> <br/>
                   (15 minutes for each presentation)
@@ -130,12 +140,17 @@ status: published
 
                   {% assign iswc_session_name = "Session 2" %}
                   {% include list-presentations.html %}
-                  
-                  13:15 -- Poster Session 2
-  
                 </td>
               </tr>
 
+              <!-- -------------------------------- -->
+
+              <tr class="">
+                <td>15:15 - 15:45</td>
+                <td>
+                  Poster Session 2
+                </td>
+              </tr>
 
               <!-- -------------------------------- -->
 
@@ -149,17 +164,22 @@ status: published
               <!-- -------------------------------- -->
 
               <tr class="">
-                <td>16:00 - 17:30</td>
+                <td>16:00 - 17:00</td>
                 <td>
                   <strong>Session 3</strong> <br/>
                   (15 minutes for each presentation)
                   <hr/>
                   {% assign iswc_session_name = "Session 3" %}
                   {% include list-presentations.html %}
+                </td>
+              </tr>
 
-                  17:00 -- Poster Session 3
-                  
-                  
+              <!-- -------------------------------- -->
+
+              <tr class="">
+                <td>17:00 - 17:30</td>
+                <td>
+                  Poster Session 3
                 </td>
               </tr>
 
