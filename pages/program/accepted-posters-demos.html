@@ -35,7 +35,7 @@ status: published
 </style>
 
 <div class="alert alert-warning" role="alert">
-  Notice: IDs of posters and demos on this page are completely different from IDs used by Posters and Demos Track Co-Chairs. Presenters must use the IDs by chairs. Please refer to <a href="/files/Poster_and_Demo_List.pdf">this PDF file</a> for them. 
+  Notice: IDs of posters and demos on this page are completely different from IDs used by Posters and Demos Track Co-Chairs. Presenters must use the IDs by chairs. Please refer to <a href="/files/Poster_and_Demo_List.pdf">this PDF file</a> for them.
 </div>
 
 <ul id="top-menu" class="nav nav-pills nav-justified">
@@ -50,7 +50,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "ID")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "poster" | sort: "PIndex")) %}
 {% include table-papers.html %}
 
 
@@ -63,7 +63,7 @@ status: published
 	<a href="#" onclick="scrollToId('iswc-page-title')">top</a>
 </div>
 
-{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "ID")) %}
+{% assign iswc_papers = (site.data.papers | where: "Track", "demo" | sort: "PIndex")) %}
 {% include table-papers.html %}
 
 <hr/>
