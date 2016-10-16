@@ -18,4 +18,4 @@ voting: false
 voting_url: "https://abemama.lodac.nii.ac.jp/iswc-vote/vote.php"
 paper_links: true
 paper_url: "https://iswc.lodac.nii.ac.jp/files"
-offline: false
+offline: true
