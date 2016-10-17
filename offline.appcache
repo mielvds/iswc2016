@@ -24,6 +24,8 @@ CACHE:
 {{ site.baseurl }}/images/iswc-header.png
 
 {{ site.baseurl }}/libs/bootstrap/fonts/glyphicons-halflings-regular.ttf
+{{ site.baseurl }}/libs/bootstrap/fonts/glyphicons-halflings-regular.woff
+{{ site.baseurl }}/libs/bootstrap/fonts/glyphicons-halflings-regular.woff2
 
 {{ site.baseurl }}/pages/program.html
 {{ site.baseurl }}/pages/program/accepted-papers.html
