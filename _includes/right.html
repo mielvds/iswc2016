@@ -1,5 +1,17 @@
 <div class="wrapper">
 
+<!-- ####################### Twitter ########################### -->
+
+
+<div class="allign-center" style="margin-bottom:7px">
+	<div class="list-group-item"  style="background-color: #009EF6">
+		<img src="{{ site.baseurl }}/images/pages/twitter-wb.png" width="20" height="20"/>
+		<a target="_blank" href="https://twitter.com/ISWC2016" class="" style="color:white">
+			<strong>@ISWC2016</strong>
+		</a>
+	</div>
+</div>
+
 <!-- ####################### Sub Menu ########################### -->
 
 
@@ -25,19 +37,19 @@
 <hr/>
 
 <!-- ####################### Widgets ########################### -->
+<!-- add false for network -->
 
-
-{% if page.group == "attending" %}
+{% if false and page.group == "attending" %}
    {% include yen-exchange.html %}
    <hr/>
 {% endif %}
 
-{% if (page.group == "calls" or page.group == "deadline") %}
+{% if false and (page.group == "calls" or page.group == "deadline") %}
    {% include clocks-hawii.html %}
    <hr/>
 {% endif %}
 
-{% if (page.group == "program" or page.group == "attending") %}
+{% if false and (page.group == "program" or page.group == "attending") %}
    {% include clocks-jp.html %}
    <hr/>
 {% endif %}
@@ -58,6 +70,9 @@
 </div>
 
 <hr/> 
+
+<!-- ####################### Artworks ########################### -->
+
 
 <div class="allign-center">
 	<div class="list-group-item">

@@ -12,6 +12,21 @@ status:   published
   </button>
 </h1>
 
+<script>
+$(document).ready(function(){
+  if(window.location.hash == ""){
+    $("#btnNavTue").click();
+  }
+
+  setTimeout(
+    function() 
+    {
+      $(this).scrollTop(0);
+    }, 1);
+  
+});
+</script>
+
 <style>
   div.panel-heading h3{
     position: relative;
@@ -121,19 +136,19 @@ status:   published
 <div>
   <ul class="nav nav-pills nav-justified iswc-day-nav" role="tablist">
     <li role="presentation" class="active">
-      <a href="#monday" aria-controls="monday" role="tab" data-toggle="tab">Monday <span class="visible-xs-inline visible-lg-block">October 17</span></a>
+      <a id="btnNavMon" href="#monday" aria-controls="monday" role="tab" data-toggle="tab">Monday <span class="visible-xs-inline visible-lg-block">October 17</span></a>
     </li>
     <li role="presentation">
-      <a href="#tuesday" aria-controls="tuesday" role="tab" data-toggle="tab">Tuesday <span class="visible-xs-inline visible-lg-block">October 18</span></a>
+      <a  id="btnNavTue" href="#tuesday" aria-controls="tuesday" role="tab" data-toggle="tab">Tuesday <span class="visible-xs-inline visible-lg-block">October 18</span></a>
     </li>
     <li role="presentation">
-      <a href="#wednesday" aria-controls="wednesday" role="tab" data-toggle="tab">Wednesday <span class="visible-xs-inline visible-lg-block">October 19</span></a>
+      <a  id="btnNavWed" href="#wednesday" aria-controls="wednesday" role="tab" data-toggle="tab">Wednesday <span class="visible-xs-inline visible-lg-block">October 19</span></a>
     </li>
     <li role="presentation">
-      <a href="#thursday" aria-controls="thursday" role="tab" data-toggle="tab">Thursday <span class="visible-xs-inline visible-lg-block">October 20</span></a>
+      <a id="btnNavThu" href="#thursday" aria-controls="thursday" role="tab" data-toggle="tab">Thursday <span class="visible-xs-inline visible-lg-block">October 20</span></a>
     </li>
     <li role="presentation">
-      <a href="#friday" aria-controls="friday" role="tab" data-toggle="tab">Friday <span class="visible-xs-inline visible-lg-block">October 21</span></a>
+      <a id="btnNavFri" href="#friday" aria-controls="friday" role="tab" data-toggle="tab">Friday <span class="visible-xs-inline visible-lg-block">October 21</span></a>
     </li>
   </ul>
 
