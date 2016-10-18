@@ -185,8 +185,8 @@
 
     $.ajax({
       method: "POST",
-      url: votingURL + '?' + $.param({vote: $('.iswc-vode-id').text(), key: $('.iswc-vote-code input').val()}),
-      data: { key: $('.iswc-vote-code').val() }
+      url: votingURL + '?' + $.param({vote: $('.iswc-vode-id').text()}),
+      data: { key: $('.iswc-vote-code input').val() }
     })
     .done(function( msg ) {
       $('.iswc-vote-success').show();
