@@ -37,19 +37,19 @@
 <hr/>
 
 <!-- ####################### Widgets ########################### -->
+<!-- add false for network -->
 
-
-{% if page.group == "attending" %}
+{% if false and page.group == "attending" %}
    {% include yen-exchange.html %}
    <hr/>
 {% endif %}
 
-{% if (page.group == "calls" or page.group == "deadline") %}
+{% if false and (page.group == "calls" or page.group == "deadline") %}
    {% include clocks-hawii.html %}
    <hr/>
 {% endif %}
 
-{% if (page.group == "program" or page.group == "attending") %}
+{% if false and (page.group == "program" or page.group == "attending") %}
    {% include clocks-jp.html %}
    <hr/>
 {% endif %}
