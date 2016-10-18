@@ -215,7 +215,7 @@
   			title = $subject.find('.iswc-paper-title a').text(),
         PIndex = title.substring(1,4);
 
-  	$('#votingModal .modal-title .iswc-vode-id').text(PIndex);
+  	$('#votingModal .modal-title .iswc-vode-id').text(id);
   	$('#votingModal').find('.iswc-vote-title').html('You are about to vote for <i>' + title + '</i>');
     $('#votingModal').find('.iswc-vote-code input').val('');
 
